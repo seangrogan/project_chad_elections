@@ -1,0 +1,19 @@
+{
+  "project_name": "Federal Canada Elections 2015",
+  "provinces": [
+    "ontario"
+  ],
+  "poll_div_geospatial": [
+    "/media/sean/F022FB6822FB31E8/gis_database/canada/polling_divisions_boundaries_2015_shp/poll_div_bounds_2015.shp"
+  ],
+  "da_data":"/media/sean/F022FB6822FB31E8/gis_database/canada/2016_census/dissemination_areas_data/DA.csv",
+  "db_data": "/media/sean/F022FB6822FB31E8/gis_database/canada/2016_census/dissemination_blocks_data/DB.csv",
+  "db_cartographic": "/media/sean/F022FB6822FB31E8/gis_database/canada/2016_census/dissemination_blocks_cartographic/dissemination_blocks_cartographic.shp",
+  "db_digital": "/media/sean/F022FB6822FB31E8/gis_database/canada/2016_census/dissemination_blocks_digital/dissemination_blocks_digital.shp",
+  "fed_2015_cartographic" : "/media/sean/F022FB6822FB31E8/gis_database/canada/2016_census/federal_electroal_district_cartographic/federal_electroal_district_cartographic.shp",
+  "canada_poll_div_2015": "/media/sean/F022FB6822FB31E8/gis_database/canada/polling_divisions_boundaries_2015_shp/poll_div_bounds_2015.shp",
+  "polling_locations_ontario": "/media/sean/F022FB6822FB31E8/gis_database/canada/polling_location_addresses/canada_polling_locations_19_10_2015_ontario.csv",
+  "db_pd_association": "/home/sean/PycharmProjects/project_chad_elections/output/associate_db_with_pd/results20191003_010613.json",
+  "canada_crs": 3347,
+  "wgs84": 4326
+}

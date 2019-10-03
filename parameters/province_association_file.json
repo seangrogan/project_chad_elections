@@ -1,0 +1,114 @@
+{
+  "Canada": {
+    "name": "Canada",
+    "abbr_en": "CAN",
+    "abbr_fr": "CAN",
+    "post": "CA",
+    "sgc": 1,
+    "region": "Nation"
+  },
+  "Newfoundland and Labrador": {
+    "name": "Newfoundland and Labrador",
+    "abbr_en": "N.L.",
+    "abbr_fr": "T.-N.-L.",
+    "post": "NL",
+    "sgc": 10,
+    "region": "Atlantic"
+  },
+  "Prince Edward Island": {
+    "name": "Prince Edward Island",
+    "abbr_en": "P.E.I.",
+    "abbr_fr": "Î.-P.-É",
+    "post": "PE",
+    "sgc": 11,
+    "region": "Atlantic"
+  },
+  "Nova Scotia": {
+    "name": "Nova Scotia",
+    "abbr_en": "N.S.",
+    "abbr_fr": "N.-É.",
+    "post": "NS",
+    "sgc": 12,
+    "region": "Atlantic"
+  },
+  "New Brunswick": {
+    "name": "New Brunswick",
+    "abbr_en": "N.B.",
+    "abbr_fr": "N.-B.",
+    "post": "NB",
+    "sgc": 13,
+    "region": "Atlantic"
+  },
+  "Quebec": {
+    "name": "Quebec",
+    "abbr_en": "Que.",
+    "abbr_fr": "Qc",
+    "post": "QC",
+    "sgc": 24,
+    "region": "Quebec"
+  },
+  "Ontario": {
+    "name": "Ontario",
+    "abbr_en": "Ont.",
+    "abbr_fr": "Ont.",
+    "post": "ON",
+    "sgc": 35,
+    "region": "Ontario"
+  },
+  "Manitoba": {
+    "name": "Manitoba",
+    "abbr_en": "Man.",
+    "abbr_fr": "Man.",
+    "post": "MB",
+    "sgc": 46,
+    "region": "Prairies"
+  },
+  "Saskatchewan": {
+    "name": "Saskatchewan",
+    "abbr_en": "Sask.",
+    "abbr_fr": "Sask.",
+    "post": "SK",
+    "sgc": 47,
+    "region": "Prairies"
+  },
+  "Alberta": {
+    "name": "Alberta",
+    "abbr_en": "Alta.",
+    "abbr_fr": "Alb.",
+    "post": "AB",
+    "sgc": 48,
+    "region": "Prairies"
+  },
+  "British Columbia": {
+    "name": "British Columbia",
+    "abbr_en": "B.C.",
+    "abbr_fr": "C.-B.",
+    "post": "BC",
+    "sgc": 59,
+    "region": "British Columbia"
+  },
+  "Yukon": {
+    "name": "Yukon",
+    "abbr_en": "Y.T.",
+    "abbr_fr": "Tn",
+    "post": "YT",
+    "sgc": 60,
+    "region": "Territories"
+  },
+  "Northwest Territories": {
+    "name": "Northwest Territories",
+    "abbr_en": "N.W.T.",
+    "abbr_fr": "T.N.-O.",
+    "post": "NT",
+    "sgc": 61,
+    "region": "Territories"
+  },
+  "Nunavut": {
+    "name": "Nunavut",
+    "abbr_en": "Nvt.",
+    "abbr_fr": "Nt",
+    "post": "NU",
+    "sgc": 62,
+    "region": "Territories"
+  }
+}
