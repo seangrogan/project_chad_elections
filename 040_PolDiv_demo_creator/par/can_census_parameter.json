@@ -1,0 +1,21 @@
+{
+  "census_profile_manager": {
+    "proportion" : [1]
+  },
+  "census_column_manager": {
+    "CENSUS_YEAR": "keep_one",
+    "GEO_CODE (POR)": "replace_with_geocode",
+    "GEO_LEVEL": "PollDiv",
+    "GEO_NAME": "replace_with_geocode",
+    "GNR": "max",
+    "GNR_LF": "max",
+    "DATA_QUALITY_FLAG": "max",
+    "ALT_GEO_CODE": "replace_with_geocode",
+    "DIM: Profile of Dissemination Areas (2247)": "keep_one",
+    "Member ID: Profile of Dissemination Areas (2247)": "keep_one",
+    "Notes: Profile of Dissemination Areas (2247)": "keep_all",
+    "Dim: Sex (3): Member ID: [1]: Total - Sex": "calculate",
+    "Dim: Sex (3): Member ID: [2]: Male": "calculate",
+    "Dim: Sex (3): Member ID: [3]: Female": "calculate"
+  }
+}
