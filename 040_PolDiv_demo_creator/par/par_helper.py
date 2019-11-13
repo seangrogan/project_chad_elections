@@ -13,8 +13,14 @@ pop_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
 men_key = 'Dim: Sex (3): Member ID: [2]: Male'
 women_key = 'Dim: Sex (3): Member ID: [3]: Female'
 
+def _range(start, stop=None):
+    if stop is None:
+        return range(start, start+1)
+    return range(start, stop+1)
+
+
 members = defaultdict(list)
-par = 'member_assigner.json'
+par = 'member_assigner_v2.json'
 _old = read_json_file(par)
 members.update(_old)
 k = sum(len(ele) for ele in members.values())
@@ -30,39 +36,64 @@ for row in data:
     print(f"  Men = {row[men_key]}")
     print(f"Women = {row[women_key]}")
     print(f"Current Keys {list(members.keys())}")
-    if row[data_key] in range(1, 2 + 1):
+    if row[data_key] in _range(1, 2): # base pop row
         method = 'population_proportional'
-    elif row[data_key] in range(4, 4 + 1):  # dwelling section
+    elif row[data_key] in _range(3): #pct inc
+        method = "self_calc_pct_inc"
+    elif row[data_key] in _range(4):  # dwelling section
         method = 'dwelling_calc'
-    elif row[data_key] in range(5, 5 + 1):  # dwelling section
+    elif row[data_key] in _range(5):  # dwelling section
         method = 'dwelling_calc_usual'
-    elif row[data_key] in range(8, 33 + 1):  # age
+    elif row[data_key] in _range(6):  # pop density
+        method = "geo_calc_1"
+    elif row[data_key] in _range(7):  # pop density
+        method = "geo_calc_2"
+    elif row[data_key] in _range(8, 33):  # age
         method = 'population_proportional'
-    elif row[data_key] in range(41, 56 + 1):  # dwelling section
+    elif row[data_key] in _range(34, 40):  # age pct
+        method = 'wt_avg'
+    elif row[data_key] in _range(41, 56):  # dwelling section
         method = 'dwelling_calc'
-    elif row[data_key] in range(59, 67 + 1):  # marriage
+    elif row[data_key] in _range(57):  # Number of persons in private households
         method = 'population_proportional'
-    elif row[data_key] in range(68, 72 + 1):  # household size
+    elif row[data_key] in _range(58):  # avg hh size
+        method = 'wt_avg'
+    elif row[data_key] in _range(59, 67):  #  Marital status for
+        method = 'population_proportional'
+    elif row[data_key] in _range(68, 72):  # household size
         method = 'dwelling_calc'
-    elif row[data_key] in range(74, 99 + 1):  # family size
+    elif row[data_key] in _range(73):  # household size
+        method = 'wt_avg'
+    elif row[data_key] in _range(74, 99):  # family size
         method = 'dwelling_calc'
-    elif row[data_key] in range(100, 110 + 1):  # Language Section
+    elif row[data_key] in _range(100, 110):  # Language Section
         method = 'population_proportional'
-    elif row[data_key] in range(112, 660 + 1):  # another language section
+    elif row[data_key] in _range(112, 660):  # another language section
         method = 'population_proportional'
-    elif row[data_key] in range(661, 871 + 1):
-        pass
-    elif row[data_key] in range(872, 1134 + 1):  # another language section
+    elif row[data_key] in _range(661, 663):
         method = 'population_proportional'
-    elif row[data_key] in range(1135, 1288 + 1):  # immigration status
+    elif row[data_key] in _range(664, 871):
+        if "median" in row[name_key].lower():
+            method = 'wt_avg'
+        elif "average" in row[name_key].lower():
+            method = 'wt_avg'
+        elif "percentage" in row[name_key].lower():
+            method = 'wt_avg'
+        else:
+            method = 'population_proportional'
+    elif row[data_key] in _range(872, 1134):  # another language section
         method = 'population_proportional'
-    elif row[data_key] in range(1289, 1322 + 1):  # Aboriginal identity
+    elif row[data_key] in _range(1135, 1288):  # immigration status
         method = 'population_proportional'
-    elif row[data_key] in range(1323, 1616 + 1):  # Ethnicity
+    elif row[data_key] in _range(1289, 1322):  # Aboriginal identity
         method = 'population_proportional'
-    elif row[data_key] in range(1683, 1864 + 1):  # Academic Achievement
+    elif row[data_key] in _range(1323, 1616):  # Ethnicity
         method = 'population_proportional'
-    elif row[data_key] in range(1865, 1877 + 1):  # Labor Force
+    elif row[data_key] in _range(1617, 1682):  # Ethnicity
+        method = 'dwelling_calc'
+    elif row[data_key] in _range(1683, 1864):  # Academic Achievement
+        method = 'population_proportional'
+    elif row[data_key] in _range(1865, 1877):  # Labor Force
         method = 'population_proportional'
     elif row[data_key] in range(1879, 1924 + 1):  # Labor Force
         method = 'population_proportional'

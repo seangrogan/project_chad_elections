@@ -15,6 +15,24 @@ name_key = 'DIM: Profile of Dissemination Areas (2247)'
 pop_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
 men_key = 'Dim: Sex (3): Member ID: [2]: Male'
 women_key = 'Dim: Sex (3): Member ID: [3]: Female'
+PolDivID = namedtuple("PolDiv", ["fed_num", "pd_num", "pd_nbr_sfx"])
+
+class DemoCreatorInfo:
+    class Files:
+        PolDiv_shape = "/media/sean/F022FB6822FB31E8/gis_database/" \
+                       "canada/polling_divisions_boundaries_2015_shp/poll_div_bounds_2015.shp"
+        PolDiv_area = "/home/sean/PycharmProjects/project_chad_elections/output/pol_div_area.csv"
+        PolDiv_DB_association = "../output/associate_db_with_pd/results20191003_010613.json"
+        DB_data = "/media/sean/F022FB6822FB31E8/gis_database/" \
+                  "canada/2016_census/dissemination_blocks_data/DB.csv"
+        DA_data_folder = "../output/da_data_separated_20191002_144203/"
+
+    data_key = 'Member ID: Profile of Dissemination Areas (2247)'
+    name_key = 'DIM: Profile of Dissemination Areas (2247)'
+    pop_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
+    men_key = 'Dim: Sex (3): Member ID: [2]: Male'
+    women_key = 'Dim: Sex (3): Member ID: [3]: Female'
+
 
 
 def generate_demo_data_for_poll_div(DA_data, PolDiv, DAs,
@@ -53,27 +71,58 @@ def build_row(row_entry, census_manager, PolDiv, member_id, DAs,
             _row_to_build[column] = calculate_column(member_id, col_val, census_manager, DAs,
                                                      DA_population_proportions, DA_dwelling_count_proportions,
                                                      DA_usual_dwelling_count_proportions,
-                                                     DA_area)
+                                                     DA_area, PolDiv)
         else:
             raise RuntimeError(f"Unknown Column {column} in row {member_id}")
     return _row_to_build
 
 
+
+
+
 def calculate_column(member_id, col_val, census_manager, DAs,
                      DA_population_proportions, DA_dwelling_count_proportions,
                      DA_usual_dwelling_count_proportions,
-                     DA_area):
+                     DA_area, PolDiv):
     while True:
         if all(isinstance(_, str) for _ in col_val.values()):
             return ""
         task = [_task for _task, _ids in census_manager["census_profile_manager"].items() if member_id in _ids]
         if task:
             task = task[0]
-            if task in {"proportional", "proportion"}:
+            if task in {"proportional", "proportion", "population_proportional"}:
                 value = 0
                 for DA in DAs:
                     value += col_val[DA] * DA_population_proportions[DA].local/DA_population_proportions[DA].total
                 return value
+            elif task in {"dwelling_calc"}:
+                value = 0
+                for DA in DAs:
+                    value += col_val[DA] * DA_dwelling_count_proportions[DA].local / DA_dwelling_count_proportions[DA].total
+                return value
+            elif task in {"dwelling_calc_usual"}:
+                value = 0
+                for DA in DAs:
+                    value += col_val[DA] * DA_usual_dwelling_count_proportions[DA].local / DA_usual_dwelling_count_proportions[DA].total
+                return value
+            elif task in {"geo_calc_1"}:
+                area = get_pol_div_area(PolDiv, prov=35)
+                area = area / 1_000_000
+                pop, totals = zip(*DA_population_proportions.values())
+                value = sum(pop)/area
+                return value
+            elif task in {"geo_calc_2"}:
+                area = get_pol_div_area(PolDiv, prov=35)
+                area = area / 1_000_000
+                return area
+            elif task in {"wt_avg"}:
+                keys = list(col_val.keys())
+                sums = 0
+                wt_val = 0
+                for key in keys:
+                    sums += DA_population_proportions[key].local
+                    wt_val += DA_population_proportions[key].local *  col_val[key]
+                return wt_val/sums
             elif task in {"to_do"}:
                 pass
             else:
@@ -85,6 +134,14 @@ def calculate_column(member_id, col_val, census_manager, DAs,
             new_task = input("Please give me a task : ")
             census_manager["census_profile_manager"][new_task] = member_id
 
+def get_pol_div_area(PolDiv, prov=35):
+    PolDiv_areas = read_csv_file(DemoCreatorInfo.Files.PolDiv_area)
+    PolDiv_areas = {PolDivID(PolDiv_area["fed_num".upper()],
+                             PolDiv_area["pd_num".upper()],
+                             PolDiv_area["pd_nbr_sfx".upper()]):
+                        PolDiv_area["area"] for PolDiv_area in PolDiv_areas
+                    if prov * 1000 <= PolDiv_area["fed_num".upper()] < (prov + 1) * 1000}
+    return PolDiv_areas[PolDiv]
 
 def canada_census_parameters(parameters=None):
     parameter_file = "./par/can_census_parameter.json"
