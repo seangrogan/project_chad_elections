@@ -1,6 +1,13 @@
+import concurrent.futures
+import csv
 import json
 import os
+import os.path
+import random
 from collections import namedtuple, defaultdict
+from os import path
+
+from tqdm import tqdm
 
 from file_readers.read_csv_file import read_csv_file
 from file_readers.read_json_file import read_json_file, write_json_file
@@ -17,6 +24,7 @@ men_key = 'Dim: Sex (3): Member ID: [2]: Male'
 women_key = 'Dim: Sex (3): Member ID: [3]: Female'
 PolDivID = namedtuple("PolDiv", ["fed_num", "pd_num", "pd_nbr_sfx"])
 
+
 class DemoCreatorInfo:
     class Files:
         PolDiv_shape = "/media/sean/F022FB6822FB31E8/gis_database/" \
@@ -32,7 +40,6 @@ class DemoCreatorInfo:
     pop_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
     men_key = 'Dim: Sex (3): Member ID: [2]: Male'
     women_key = 'Dim: Sex (3): Member ID: [3]: Female'
-
 
 
 def generate_demo_data_for_poll_div(DA_data, PolDiv, DAs,
@@ -64,7 +71,10 @@ def build_row(row_entry, census_manager, PolDiv, member_id, DAs,
         elif task in {"PollDiv"}:
             _row_to_build[column] = "PollDiv"
         elif task in {"max", "maximum"}:
-            _row_to_build[column] = max(col_val.values())
+            try:
+                _row_to_build[column] = max(col_val.values())
+            except TypeError:
+                _row_to_build[column] = ";".join(set(str(e) for e in col_val.values()))
         elif task in {"keep_all"}:
             _row_to_build[column] = ";".join(set(str(e) for e in col_val.values()))
         elif task in {"calculate"}:
@@ -77,39 +87,45 @@ def build_row(row_entry, census_manager, PolDiv, member_id, DAs,
     return _row_to_build
 
 
-
-
-
 def calculate_column(member_id, col_val, census_manager, DAs,
                      DA_population_proportions, DA_dwelling_count_proportions,
                      DA_usual_dwelling_count_proportions,
                      DA_area, PolDiv):
     while True:
-        if all(isinstance(_, str) for _ in col_val.values()):
+        if all(_ == "..." for _ in col_val.values()):
             return ""
+        if any(_ == "..." for _ in col_val.values()):
+            for i in col_val.keys():
+                col_val[i] = 0.0
+        if any(_ == "x" for _ in col_val.values()):
+            return "x"
         task = [_task for _task, _ids in census_manager["census_profile_manager"].items() if member_id in _ids]
         if task:
-            task = task[0]
+            task = task[-1]
             if task in {"proportional", "proportion", "population_proportional"}:
                 value = 0
                 for DA in DAs:
-                    value += col_val[DA] * DA_population_proportions[DA].local/DA_population_proportions[DA].total
+                    value += col_val[DA] * DA_population_proportions[DA].local / DA_population_proportions[DA].total if \
+                    DA_population_proportions[DA].total > 0 else 0
                 return value
             elif task in {"dwelling_calc"}:
                 value = 0
                 for DA in DAs:
-                    value += col_val[DA] * DA_dwelling_count_proportions[DA].local / DA_dwelling_count_proportions[DA].total
+                    value += col_val[DA] * DA_dwelling_count_proportions[DA].local / DA_dwelling_count_proportions[
+                        DA].total if DA_dwelling_count_proportions[DA].total > 0 else 0
                 return value
             elif task in {"dwelling_calc_usual"}:
                 value = 0
                 for DA in DAs:
-                    value += col_val[DA] * DA_usual_dwelling_count_proportions[DA].local / DA_usual_dwelling_count_proportions[DA].total
+                    value += col_val[DA] * DA_usual_dwelling_count_proportions[DA].local / \
+                             DA_usual_dwelling_count_proportions[DA].total if DA_usual_dwelling_count_proportions[
+                                                                                  DA].total > 0 else 0
                 return value
             elif task in {"geo_calc_1"}:
                 area = get_pol_div_area(PolDiv, prov=35)
                 area = area / 1_000_000
                 pop, totals = zip(*DA_population_proportions.values())
-                value = sum(pop)/area
+                value = sum(pop) / area
                 return value
             elif task in {"geo_calc_2"}:
                 area = get_pol_div_area(PolDiv, prov=35)
@@ -121,18 +137,19 @@ def calculate_column(member_id, col_val, census_manager, DAs,
                 wt_val = 0
                 for key in keys:
                     sums += DA_population_proportions[key].local
-                    wt_val += DA_population_proportions[key].local *  col_val[key]
-                return wt_val/sums
-            elif task in {"to_do"}:
-                pass
+                    wt_val += DA_population_proportions[key].local * col_val[key]
+                if sums == 0 and wt_val == 0:
+                    return 0
+                return wt_val / sums
             else:
                 print("")
-                input("LOL1")
+                assert False
         else:
             print(f"No task given for {member_id}")
             print(f"Column Vals: {col_val}")
             new_task = input("Please give me a task : ")
             census_manager["census_profile_manager"][new_task] = member_id
+
 
 def get_pol_div_area(PolDiv, prov=35):
     PolDiv_areas = read_csv_file(DemoCreatorInfo.Files.PolDiv_area)
@@ -142,6 +159,7 @@ def get_pol_div_area(PolDiv, prov=35):
                         PolDiv_area["area"] for PolDiv_area in PolDiv_areas
                     if prov * 1000 <= PolDiv_area["fed_num".upper()] < (prov + 1) * 1000}
     return PolDiv_areas[PolDiv]
+
 
 def canada_census_parameters(parameters=None):
     parameter_file = "./par/can_census_parameter.json"
@@ -184,11 +202,41 @@ def create_demographic_data_for_polldiv(PolDiv, DBs, DA_files, DB_data):
     return demo_data
 
 
-def PolDiv_demo_creator():
+def PolDiv_demo_creator(mp=False):
     DA_files, DB_data, PolDiv_DB_associations = get_files()
     PolDivs = list(PolDiv_DB_associations.keys())
-    for PolDiv in PolDivs:
-        create_demographic_data_for_polldiv(PolDiv, PolDiv_DB_associations[PolDiv], DA_files, DB_data)
+    random.shuffle(PolDivs)
+    if mp:
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            results = [executor.submit(calculate_poldiv, (PolDiv, PolDiv_DB_associations, DA_files))
+                       for PolDiv in tqdm(PolDivs, desc="Executing")]
+            p_bar = tqdm(total=len(PolDivs), desc="Resulting")
+            for result in concurrent.futures.as_completed(results):
+                r = result.result()
+                p_bar.update()
+    else:
+        for PolDiv in tqdm(PolDivs, desc="Running"):
+            calculate_poldiv (PolDiv, PolDiv_DB_associations, DA_files)
+
+
+def calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files):
+    try:
+        out_folder = f"./project_chad_elections/output/pol_div_demo_data/{get_poldiv_name(PolDiv)}.csv"
+        if path.isfile(out_folder):
+            print(f"PolDiv {get_poldiv_name(PolDiv)} has been done")
+            return 0
+        demo_data = create_demographic_data_for_polldiv(PolDiv, PolDiv_DB_associations[PolDiv], DA_files, DB_data)
+        test_directory(out_folder)
+        fieldnames = demo_data[0].keys()
+        with open(out_folder, 'w') as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(demo_data)
+            return 0
+    except:
+        print(f"there was an error with {PolDiv}, trying again")
+        print("*****************************************************")
+        calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files)
 
 
 def get_da_files(DAs, da_files):
