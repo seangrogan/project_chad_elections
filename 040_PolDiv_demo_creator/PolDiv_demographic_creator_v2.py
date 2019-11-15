@@ -1,10 +1,10 @@
-import concurrent.futures
+import csv
 import csv
 import json
 import os
 import os.path
-import random
 from collections import namedtuple, defaultdict
+from multiprocessing import Pool, Process
 from os import path
 
 from tqdm import tqdm
@@ -22,7 +22,14 @@ name_key = 'DIM: Profile of Dissemination Areas (2247)'
 pop_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
 men_key = 'Dim: Sex (3): Member ID: [2]: Male'
 women_key = 'Dim: Sex (3): Member ID: [3]: Female'
-PolDivID = namedtuple("PolDiv", ["fed_num", "pd_num", "pd_nbr_sfx"])
+
+
+PolDivID = namedtuple("PolDivID", ["fed_num", "pd_num", "pd_nbr_sfx"])
+# class PolDivID:
+#     fed_num, pd_num, pd_nbr_sfx = None, None, None
+#
+#     def __init__(self, fed_num, pd_num, pd_nbr_sfx):
+#         self.fed_num, self.pd_num, self.pd_nbr_sfx = fed_num, pd_num, pd_nbr_sfx
 
 
 class DemoCreatorInfo:
@@ -106,7 +113,7 @@ def calculate_column(member_id, col_val, census_manager, DAs,
                 value = 0
                 for DA in DAs:
                     value += col_val[DA] * DA_population_proportions[DA].local / DA_population_proportions[DA].total if \
-                    DA_population_proportions[DA].total > 0 else 0
+                        DA_population_proportions[DA].total > 0 else 0
                 return value
             elif task in {"dwelling_calc"}:
                 value = 0
@@ -205,21 +212,40 @@ def create_demographic_data_for_polldiv(PolDiv, DBs, DA_files, DB_data):
 def PolDiv_demo_creator(mp=False):
     DA_files, DB_data, PolDiv_DB_associations = get_files()
     PolDivs = list(PolDiv_DB_associations.keys())
-    random.shuffle(PolDivs)
+    print(f"len p_div {len(PolDivs)}")
+    # random.shuffle(PolDivs)
+    PolDivs = PolDivs.copy()
+    n_divs = len(PolDivs)
+    PolDivs = PolDivs[0:-1:5]
+    print(f"len p_div {len(PolDivs)}")
     if mp:
-        with concurrent.futures.ProcessPoolExecutor() as executor:
-            results = [executor.submit(calculate_poldiv, (PolDiv, PolDiv_DB_associations, DA_files))
-                       for PolDiv in tqdm(PolDivs, desc="Executing")]
-            p_bar = tqdm(total=len(PolDivs), desc="Resulting")
-            for result in concurrent.futures.as_completed(results):
-                r = result.result()
-                p_bar.update()
+        # with Pool(processes=3) as pool:
+        #     arguments = tuple((PolDiv, PolDiv_DB_associations, DA_files) for PolDiv in tqdm(PolDivs, desc="Arging"))
+        #     todo = pool.map(calculate_poldiv, arguments)
+        #     # todo.get()
+        P = []
+        for PolDiv in tqdm(PolDivs, desc="Executing"):
+            P.append(Process(target=calculate_poldiv, args=(PolDiv, PolDiv_DB_associations, DA_files)))
+        p_bar = tqdm(total=len(P[::3])//3)
+        for p1, p2, p3 in zip(P[0::3], P[1::3], P[2::3]):
+            p1.start(), p2.start(), p3.start()
+            p1.join(), p2.join(), p3.join()
+            p_bar.update()
+        # for _p in P:
+        #     _p.join()
+        # with concurrent.futures.ProcessPoolExecutor() as executor:
+        #     results = [executor.submit(calculate_poldiv, (PolDiv, PolDiv_DB_associations, DA_files))
+        #                for PolDiv in tqdm(PolDivs, desc="Executing")]
+        #     p_bar = tqdm(total=len(PolDivs), desc="Resulting")
+        #     for result in concurrent.futures.as_completed(results):
+        #         r = result.result()
+        #         p_bar.update()
     else:
         for PolDiv in tqdm(PolDivs, desc="Running"):
-            calculate_poldiv (PolDiv, PolDiv_DB_associations, DA_files)
+            calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files)
 
 
-def calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files):
+def calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files, try_ct=0):
     try:
         out_folder = f"./project_chad_elections/output/pol_div_demo_data/{get_poldiv_name(PolDiv)}.csv"
         if path.isfile(out_folder):
@@ -236,7 +262,11 @@ def calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files):
     except:
         print(f"there was an error with {PolDiv}, trying again")
         print("*****************************************************")
-        calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files)
+        try_ct += 1
+        with open("Missed.txt", "w") as misfile:
+            misfile.write(str(PolDiv))
+        if try_ct < 3:
+            calculate_poldiv(PolDiv, PolDiv_DB_associations, DA_files, try_ct)
 
 
 def get_da_files(DAs, da_files):
