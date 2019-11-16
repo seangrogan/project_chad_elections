@@ -1,0 +1,3096 @@
+{
+    "Micha\u00eblle Jean P.S.- 180 Williamson Drive East Ajax ON L1Z 0G7": {
+        "name": "Micha\u00eblle Jean P.S.-",
+        "addr": "180 Williamson Drive East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 0G7",
+        "osm": {
+            "x": -79.0247573757947,
+            "y": 43.89604465,
+            "addr:housenumber": "180",
+            "addr:street": "Williamson Drive East",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 0G7"
+        },
+        "PolDivs": [
+            "35001-24-0-",
+            "35001-3-0-",
+            "35001-2-0-",
+            "35001-4-0-A",
+            "35001-1-0-",
+            "35001-4-0-B"
+        ]
+    },
+    "St. Josephine Bakhita Catholic School 51 Williamson Drive East Ajax ON L1T 0B4": {
+        "name": "St. Josephine Bakhita Catholic School",
+        "addr": "51 Williamson Drive East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 0B4",
+        "osm": {
+            "x": -79.0317839328148,
+            "y": 43.8908954,
+            "addr:housenumber": "51",
+            "addr:street": "Williamson Drive East",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 0B4"
+        },
+        "PolDivs": [
+            "35001-22-0-A",
+            "35001-58-0-",
+            "35001-9-0-",
+            "35001-7-0-",
+            "35001-5-0-",
+            "35001-6-0-",
+            "35001-22-0-B"
+        ]
+    },
+    "J. Clarke Richardson Collegiate 1355 Harwood Avenue North Ajax ON L1T 4G8": {
+        "name": "J. Clarke Richardson Collegiate",
+        "addr": "1355 Harwood Avenue North",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4G8",
+        "osm": {
+            "x": -79.0263318723815,
+            "y": 43.88297365,
+            "addr:housenumber": "1355",
+            "addr:street": "Harwood Avenue North",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 4G8"
+        },
+        "PolDivs": [
+            "35001-52-0-",
+            "35001-10-0-",
+            "35001-60-0-",
+            "35001-12-0-",
+            "35001-8-0-",
+            "35001-56-0-",
+            "35001-57-0-",
+            "35001-11-0-"
+        ]
+    },
+    "Romeo Dallaire Public School 300 Williamson Drive East Ajax ON L1Z 0H6": {
+        "name": "Romeo Dallaire Public School",
+        "addr": "300 Williamson Drive East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 0H6",
+        "osm": {
+            "x": -79.0139956537803,
+            "y": 43.8987941,
+            "addr:housenumber": "300",
+            "addr:street": "Williamson Drive East",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 0H6"
+        },
+        "PolDivs": [
+            "35001-14-0-",
+            "35001-13-0-B",
+            "35001-23-0-",
+            "35001-25-0-",
+            "35001-15-0-",
+            "35001-27-0-",
+            "35001-21-0-",
+            "35001-13-0-A"
+        ]
+    },
+    "Audley Recreation Centre 1955 Audley Road North Ajax ON L1Z 0L2": {
+        "name": "Audley Recreation Centre",
+        "addr": "1955 Audley Road North",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 0L2",
+        "PolDivs": [
+            "35001-604--",
+            "35001-605--",
+            "35001-30-0-",
+            "35001-16-0-",
+            "35001-18-0-",
+            "35001-17-0-",
+            "35001-19-0-",
+            "35001-29-0-",
+            "35001-26-0-",
+            "35001-20-0-"
+        ],
+        "arcgis": {
+            "address": "1955 Audley Rd, Ajax, Ontario, L1Z 0L2",
+            "bbox": {
+                "northeast": [
+                    43.89965404165363,
+                    -79.00840889256204
+                ],
+                "southwest": [
+                    43.89765404165364,
+                    -79.01040889256205
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.898654041653636,
+            "lng": -79.00940889256205,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "1955 Audley Rd, Ajax, Ontario, L1Z 0L2",
+                "extent": {
+                    "xmin": -79.01040889256205,
+                    "ymin": 43.89765404165364,
+                    "xmax": -79.00840889256204,
+                    "ymax": 43.89965404165363
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.00940889256205,
+                        "y": 43.898654041653636
+                    },
+                    "attributes": {
+                        "Score": 99.05,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 99.05,
+            "status": "OK"
+        }
+    },
+    "Pickering Christian School 162 Rossland Road East Ajax ON L1T 4V2": {
+        "name": "Pickering Christian School",
+        "addr": "162 Rossland Road East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4V2",
+        "PolDivs": [
+            "35001-31-0-",
+            "35001-28-0-A",
+            "35001-28-0-B"
+        ],
+        "arcgis": {
+            "address": "162 Rossland Rd E, Ajax, Ontario, L1T 4V2",
+            "bbox": {
+                "northeast": [
+                    43.88303000000001,
+                    -79.0233415
+                ],
+                "southwest": [
+                    43.87903000000001,
+                    -79.02734149999999
+                ]
+            },
+            "confidence": 8,
+            "lat": 43.88031711913511,
+            "lng": -79.0250374883719,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "162 Rossland Rd E, Ajax, Ontario, L1T 4V2",
+                "extent": {
+                    "xmin": -79.02734149999999,
+                    "ymin": 43.87903000000001,
+                    "xmax": -79.0233415,
+                    "ymax": 43.88303000000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.0250374883719,
+                        "y": 43.88031711913511
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Cadarackque Public School 15 Miles Drive Ajax ON L1Z 1C7": {
+        "name": "Cadarackque Public School",
+        "addr": "15 Miles Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 1C7",
+        "osm": {
+            "x": -79.0093653860697,
+            "y": 43.86170115,
+            "addr:housenumber": "15",
+            "addr:street": "Miles Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 1C7"
+        },
+        "PolDivs": [
+            "35001-127-0-",
+            "35001-34-0-",
+            "35001-129-0-",
+            "35001-33-0-",
+            "35001-32-0-"
+        ]
+    },
+    "Mother Teresa Catholic School 15 Fishlock Street Ajax ON L1Z 1H1": {
+        "name": "Mother Teresa Catholic School",
+        "addr": "15 Fishlock Street",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 1H1",
+        "osm": {
+            "x": -79.0303173219713,
+            "y": 43.8752816,
+            "addr:housenumber": "15",
+            "addr:street": "Fishlock Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 1H1"
+        },
+        "PolDivs": [
+            "35001-35-0-",
+            "35001-37-0-",
+            "35001-36-0-"
+        ]
+    },
+    "Terry Fox Public School 30 Kerrison Drive West Ajax ON L1Z 1K1": {
+        "name": "Terry Fox Public School",
+        "addr": "30 Kerrison Drive West",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 1K1",
+        "osm": {
+            "x": -79.0270921643279,
+            "y": 43.87050725,
+            "addr:housenumber": "30",
+            "addr:street": "Kerrison Drive West",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 1K1"
+        },
+        "PolDivs": [
+            "35001-91-0-A",
+            "35001-40-0-",
+            "35001-39-0-",
+            "35001-606--",
+            "35001-41-0-",
+            "35001-38-0-"
+        ]
+    },
+    "St. Catherine of Siena Catholic School 15 Bennett Avenue Ajax ON L1T 3P1": {
+        "name": "St. Catherine of Siena Catholic School",
+        "addr": "15 Bennett Avenue",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3P1",
+        "osm": {
+            "x": -79.0359879866866,
+            "y": 43.87385925,
+            "addr:housenumber": "15",
+            "addr:street": "Bennett Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 3P1"
+        },
+        "PolDivs": [
+            "35001-48-0-",
+            "35001-47-0-",
+            "35001-43-0-",
+            "35001-44-0-",
+            "35001-45-0-",
+            "35001-42-0-"
+        ]
+    },
+    "McLean Community Centre 95 Magill Drive Ajax ON L1T 3K7": {
+        "name": "McLean Community Centre",
+        "addr": "95 Magill Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3K7",
+        "PolDivs": [
+            "35001-90-0-",
+            "35001-88-0-",
+            "35001-608--",
+            "35001-83-0-",
+            "35001-89-0-",
+            "35001-87-0-",
+            "35001-96-0-",
+            "35001-607--",
+            "35001-46-0-",
+            "35001-103-0-"
+        ],
+        "arcgis": {
+            "address": "95 Magill Dr, Ajax, Ontario, L1T 4M5",
+            "bbox": {
+                "northeast": [
+                    43.867850713066055,
+                    -79.03719655905051
+                ],
+                "southwest": [
+                    43.86585071306606,
+                    -79.03919655905052
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.86685071306606,
+            "lng": -79.03819655905052,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "95 Magill Dr, Ajax, Ontario, L1T 4M5",
+                "extent": {
+                    "xmin": -79.03919655905052,
+                    "ymin": 43.86585071306606,
+                    "xmax": -79.03719655905051,
+                    "ymax": 43.867850713066055
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.03819655905052,
+                        "y": 43.86685071306606
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Vimy Ridge Public School 40 Telford Street Ajax ON L1T 4Z4": {
+        "name": "Vimy Ridge Public School",
+        "addr": "40 Telford Street",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4Z4",
+        "osm": {
+            "x": -79.0490701747159,
+            "y": 43.87869675,
+            "addr:housenumber": "40",
+            "addr:street": "Telford Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 4Z4"
+        },
+        "PolDivs": [
+            "35001-49-0-",
+            "35001-61-0-",
+            "35001-50-0-",
+            "35001-64-0-",
+            "35001-63-0-",
+            "35001-603--",
+            "35001-602--",
+            "35001-62-0-",
+            "35001-68-0-A",
+            "35001-68-0-B",
+            "35001-65-0-"
+        ]
+    },
+    "Brother Andr\u00e9 Catholic School 60 Seggar Avenue Ajax ON L1T 4Y4": {
+        "name": "Brother Andr\u00e9 Catholic School",
+        "addr": "60 Seggar Avenue",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4Y4",
+        "osm": {
+            "x": -79.0448872732633,
+            "y": 43.8830889,
+            "addr:housenumber": "60",
+            "addr:street": "Seggar Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 4Y4"
+        },
+        "PolDivs": [
+            "35001-51-0-",
+            "35001-53-0-",
+            "35001-54-0-",
+            "35001-55-0-",
+            "35001-59-0-"
+        ]
+    },
+    "Rossland Ridge Bible Chapel 1 Stevensgate Drive Ajax ON L1T 4Z5": {
+        "name": "Rossland Ridge Bible Chapel",
+        "addr": "1 Stevensgate Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4Z5",
+        "PolDivs": [
+            "35001-77-0-",
+            "35001-66-0-",
+            "35001-75-0-",
+            "35001-81-0-",
+            "35001-67-0-"
+        ],
+        "arcgis": {
+            "address": "1 Stevensgate Dr, Ajax, Ontario, L1T 0G1",
+            "bbox": {
+                "northeast": [
+                    43.8758711054457,
+                    -79.04844806336833
+                ],
+                "southwest": [
+                    43.8738711054457,
+                    -79.05044806336834
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.8748711054457,
+            "lng": -79.04944806336833,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "1 Stevensgate Dr, Ajax, Ontario, L1T 0G1",
+                "extent": {
+                    "xmin": -79.05044806336834,
+                    "ymin": 43.8738711054457,
+                    "xmax": -79.04844806336833,
+                    "ymax": 43.8758711054457
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.04944806336833,
+                        "y": 43.8748711054457
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Forest Brook Community Church 60 Kearney Drive Ajax ON L1T 4N2": {
+        "name": "Forest Brook Community Church",
+        "addr": "60 Kearney Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 4N2",
+        "PolDivs": [
+            "35001-73-0-",
+            "35001-74-0-",
+            "35001-72-0-",
+            "35001-69-0-",
+            "35001-104-0-",
+            "35001-99-0-",
+            "35001-71-0-"
+        ],
+        "arcgis": {
+            "address": "60 Kearney Dr, Ajax, Ontario, L1T 4N2",
+            "bbox": {
+                "northeast": [
+                    43.85792825251214,
+                    -79.06091727173717
+                ],
+                "southwest": [
+                    43.85592825251214,
+                    -79.06291727173718
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.85692825251214,
+            "lng": -79.06191727173717,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "60 Kearney Dr, Ajax, Ontario, L1T 4N2",
+                "extent": {
+                    "xmin": -79.06291727173718,
+                    "ymin": 43.85592825251214,
+                    "xmax": -79.06091727173717,
+                    "ymax": 43.85792825251214
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.06191727173717,
+                        "y": 43.85692825251214
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Pickering Village United Church 300 Church Street North Ajax ON L1T 2W7": {
+        "name": "Pickering Village United Church",
+        "addr": "300 Church Street North",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 2W7",
+        "osm": {
+            "x": -79.0584888414898,
+            "y": 43.8609514521315,
+            "addr:housenumber": "300",
+            "addr:street": "Church Street North",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 3A3"
+        },
+        "PolDivs": [
+            "35001-70-0-",
+            "35001-105-0-",
+            "35001-100-0-",
+            "35001-102-0-",
+            "35001-101-0-"
+        ]
+    },
+    "Alexander Graham Bell Public School 25 Harkins Drive Ajax ON L1T 3T6": {
+        "name": "Alexander Graham Bell Public School",
+        "addr": "25 Harkins Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3T6",
+        "osm": {
+            "x": -79.0565711050729,
+            "y": 43.8701267,
+            "addr:housenumber": "25",
+            "addr:street": "Harkins Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 3T6"
+        },
+        "PolDivs": [
+            "35001-76-0-",
+            "35001-97-0-",
+            "35001-79-0-",
+            "35001-80-0-",
+            "35001-98-0-"
+        ]
+    },
+    "Lester B. Pearson Public School 21 Coughlen Street Ajax ON L1T 2M9": {
+        "name": "Lester B. Pearson Public School",
+        "addr": "21 Coughlen Street",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 2M9",
+        "osm": {
+            "x": -79.0433665676922,
+            "y": 43.8713952,
+            "addr:housenumber": "21",
+            "addr:street": "Coughlen Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 2M9"
+        },
+        "PolDivs": [
+            "35001-86-0-",
+            "35001-78-0-",
+            "35001-82-0-",
+            "35001-85-0-",
+            "35001-84-0-"
+        ]
+    },
+    "Applecroft Public School 55 Coles Avenue Ajax ON L1T 3H5": {
+        "name": "Applecroft Public School",
+        "addr": "55 Coles Avenue",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3H5",
+        "osm": {
+            "x": -79.0334779203146,
+            "y": 43.86677955,
+            "addr:housenumber": "55",
+            "addr:street": "Coles Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 3H5"
+        },
+        "PolDivs": [
+            "35001-92-0-",
+            "35001-94-0-",
+            "35001-95-0-",
+            "35001-93-0-"
+        ]
+    },
+    "St. Patrick Catholic School 280 Delaney Drive Ajax ON L1T 3N5": {
+        "name": "St. Patrick Catholic School",
+        "addr": "280 Delaney Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3N5",
+        "osm": {
+            "x": -79.0556805199336,
+            "y": 43.86683475,
+            "addr:housenumber": "280",
+            "addr:street": "Delaney Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1T 3N5"
+        },
+        "PolDivs": [
+            "35001-109-0-",
+            "35001-110-0-",
+            "35001-107-0-",
+            "35001-108-0-",
+            "35001-106-0-"
+        ]
+    },
+    "Pickering & Village Seniors Centre- 29 Linton Avenue Ajax ON L1T 3A7": {
+        "name": "Pickering & Village Seniors Centre-",
+        "addr": "29 Linton Avenue",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1T 3A7",
+        "PolDivs": [
+            "35001-115-0-",
+            "35001-114-0-",
+            "35001-113-0-",
+            "35001-111-0-",
+            "35001-112-0-"
+        ],
+        "arcgis": {
+            "address": "29 Linton Ave, Ajax, Ontario, L1T 3A7",
+            "bbox": {
+                "northeast": [
+                    43.85642177337434,
+                    -79.05759604901453
+                ],
+                "southwest": [
+                    43.85442177337435,
+                    -79.05959604901454
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.855421773374346,
+            "lng": -79.05859604901454,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "29 Linton Ave, Ajax, Ontario, L1T 3A7",
+                "extent": {
+                    "xmin": -79.05959604901454,
+                    "ymin": 43.85442177337435,
+                    "xmax": -79.05759604901453,
+                    "ymax": 43.85642177337434
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.05859604901454,
+                        "y": 43.855421773374346
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Roland Michener Public School 95 Ritchie Avenue Ajax ON L1S 6S2": {
+        "name": "Roland Michener Public School",
+        "addr": "95 Ritchie Avenue",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 6S2",
+        "osm": {
+            "x": -79.0381792962827,
+            "y": 43.85397,
+            "addr:housenumber": "95",
+            "addr:street": "Ritchie Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 6S2"
+        },
+        "PolDivs": [
+            "35001-117-0-",
+            "35001-124-0-",
+            "35001-118-0-",
+            "35001-116-0-",
+            "35001-120-0-",
+            "35001-119-0-"
+        ]
+    },
+    "Lord Elgin Public School 24 Ontario Street Ajax ON L1S 1T6": {
+        "name": "Lord Elgin Public School",
+        "addr": "24 Ontario Street",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 1T6",
+        "osm": {
+            "x": -79.0262915625046,
+            "y": 43.85678465,
+            "addr:housenumber": "24",
+            "addr:street": "Ontario Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 1T6"
+        },
+        "PolDivs": [
+            "35001-122-0-",
+            "35001-123-0-",
+            "35001-126-0-",
+            "35001-121-0-"
+        ]
+    },
+    "Ajax Public Library 55 Harwood Avenue South-East Ajax ON L1S 2H8": {
+        "name": "Ajax Public Library",
+        "addr": "55 Harwood Avenue South-East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 2H8",
+        "PolDivs": [
+            "35001-138-0-",
+            "35001-128-0-",
+            "35001-125-0-"
+        ],
+        "arcgis": {
+            "address": "55 Harwood Ave S, Ajax, Ontario, L1S 2H8",
+            "bbox": {
+                "northeast": [
+                    43.853384,
+                    -79.0187695
+                ],
+                "southwest": [
+                    43.84938399999999,
+                    -79.0227695
+                ]
+            },
+            "confidence": 8,
+            "lat": 43.851230862629016,
+            "lng": -79.02128934563483,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "55 Harwood Ave S, Ajax, Ontario, L1S 2H8",
+                "extent": {
+                    "xmin": -79.0227695,
+                    "ymin": 43.84938399999999,
+                    "xmax": -79.0187695,
+                    "ymax": 43.853384
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.02128934563483,
+                        "y": 43.851230862629016
+                    },
+                    "attributes": {
+                        "Score": 99.05,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 99.05,
+            "status": "OK"
+        }
+    },
+    "St. Andrew's Community Centre 46 Exeter Road Ajax ON L1S 2J8": {
+        "name": "St. Andrew's Community Centre",
+        "addr": "46 Exeter Road",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 2J8",
+        "PolDivs": [
+            "35001-141-0-",
+            "35001-130-0-",
+            "35001-142-0-",
+            "35001-140-0-",
+            "35001-139-0-"
+        ],
+        "arcgis": {
+            "address": "46 Exeter Rd, Ajax, Ontario, L1S 2J8",
+            "bbox": {
+                "northeast": [
+                    43.851143,
+                    -79.016119
+                ],
+                "southwest": [
+                    43.847142999999996,
+                    -79.020119
+                ]
+            },
+            "confidence": 8,
+            "lat": 43.849036885105825,
+            "lng": -79.01862610514199,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "46 Exeter Rd, Ajax, Ontario, L1S 2J8",
+                "extent": {
+                    "xmin": -79.020119,
+                    "ymin": 43.847142999999996,
+                    "xmax": -79.016119,
+                    "ymax": 43.851143
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01862610514199,
+                        "y": 43.849036885105825
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Carruthers Creek Golf Club 650 Lakeridge Road South Ajax ON L1Z 1W9": {
+        "name": "Carruthers Creek Golf Club",
+        "addr": "650 Lakeridge Road South",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 1W9",
+        "PolDivs": [
+            "35001-151-0-",
+            "35001-132-0-",
+            "35001-148-0-",
+            "35001-150-0-",
+            "35001-149-0-",
+            "35001-131-0-",
+            "35001-134-0-",
+            "35001-612--",
+            "35001-133-0-"
+        ],
+        "arcgis": {
+            "address": "650 Lake Ridge Rd S, Ajax, Ontario, L1Z",
+            "bbox": {
+                "northeast": [
+                    43.851903546265774,
+                    -78.97718688778747
+                ],
+                "southwest": [
+                    43.84990354626578,
+                    -78.97918688778748
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.850903546265776,
+            "lng": -78.97818688778747,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "650 Lake Ridge Rd S, Ajax, Ontario, L1Z",
+                "extent": {
+                    "xmin": -78.97918688778748,
+                    "ymin": 43.84990354626578,
+                    "xmax": -78.97718688778747,
+                    "ymax": 43.851903546265774
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -78.97818688778747,
+                        "y": 43.850903546265776
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Carruthers Creek Public School 1 Greenhalf Drive Ajax ON L1S 7N6": {
+        "name": "Carruthers Creek Public School",
+        "addr": "1 Greenhalf Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 7N6",
+        "osm": {
+            "x": -79.0047929826595,
+            "y": 43.8399763,
+            "addr:housenumber": "1",
+            "addr:street": "Greenhalf Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 7N6"
+        },
+        "PolDivs": [
+            "35001-136-0-",
+            "35001-156-0-",
+            "35001-135-0-",
+            "35001-143-0-",
+            "35001-144-0-"
+        ]
+    },
+    "C4 Church 599 Bayly Street East Ajax ON L1Z 1L4": {
+        "name": "C4 Church",
+        "addr": "599 Bayly Street East",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 1L4",
+        "osm": {
+            "x": -78.9891103717568,
+            "y": 43.84944255,
+            "addr:housenumber": "599",
+            "addr:street": "Bayly Street East",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 1L4"
+        },
+        "PolDivs": [
+            "35001-159-0-",
+            "35001-137-0-",
+            "35001-157-0-",
+            "35001-155-0-",
+            "35001-154-0-"
+        ]
+    },
+    "Ajax Community Centre 75 Centennial Road Ajax ON L1S 4S4": {
+        "name": "Ajax Community Centre",
+        "addr": "75 Centennial Road",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 4S4",
+        "osm": {
+            "x": -79.02063487625,
+            "y": 43.83930555,
+            "addr:housenumber": "75",
+            "addr:street": "Centennial Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 4S4"
+        },
+        "PolDivs": [
+            "35001-145-0-",
+            "35001-163-0-",
+            "35001-609--",
+            "35001-146-0-",
+            "35001-611--",
+            "35001-165-0-",
+            "35001-164-0-"
+        ]
+    },
+    "St. James Catholic School 10 Clover Ridge Drive West Ajax ON L1S 3E5": {
+        "name": "St. James Catholic School",
+        "addr": "10 Clover Ridge Drive West",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3E5",
+        "osm": {
+            "x": -79.0144824495428,
+            "y": 43.82654525,
+            "addr:housenumber": "10",
+            "addr:street": "Clover Ridge Drive West",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 3E5"
+        },
+        "PolDivs": [
+            "35001-173-0-",
+            "35001-169-0-",
+            "35001-166-0-",
+            "35001-172-0-",
+            "35001-147-0-"
+        ]
+    },
+    "Carruthers Marsh Pavilion 55 Ashbury Boulevard Ajax ON L1Z 0E7": {
+        "name": "Carruthers Marsh Pavilion",
+        "addr": "55 Ashbury Boulevard",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1Z 0E7",
+        "osm": {
+            "x": -78.986402147033,
+            "y": 43.83152225,
+            "addr:housenumber": "55",
+            "addr:street": "Ashbury Boulevard",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1Z 0E7"
+        },
+        "PolDivs": [
+            "35001-153-0-",
+            "35001-152-0-",
+            "35001-158-0-"
+        ]
+    },
+    "Southwood Park Public School 28 Lambard Crescent Ajax ON L1S 1M5": {
+        "name": "Southwood Park Public School",
+        "addr": "28 Lambard Crescent",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 1M5",
+        "osm": {
+            "x": -79.0087405780662,
+            "y": 43.8341167,
+            "addr:housenumber": "28",
+            "addr:street": "Lambard Crescent",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 1M5"
+        },
+        "PolDivs": [
+            "35001-160-0-",
+            "35001-175-0-",
+            "35001-610--",
+            "35001-162-0-",
+            "35001-171-0-",
+            "35001-161-0-"
+        ]
+    },
+    "Duffin's Bay Public School 66 Pittmann Crescent Ajax ON L1S 3G3": {
+        "name": "Duffin's Bay Public School",
+        "addr": "66 Pittmann Crescent",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3G3",
+        "PolDivs": [
+            "35001-177-0-",
+            "35001-167-0-",
+            "35001-174-0-",
+            "35001-170-0-",
+            "35001-176-0-"
+        ],
+        "arcgis": {
+            "address": "66 Pittmann Cres, Ajax, Ontario, L1S 3G3",
+            "bbox": {
+                "northeast": [
+                    43.82596900000001,
+                    -79.019252
+                ],
+                "southwest": [
+                    43.82396900000001,
+                    -79.021252
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.82508534081606,
+            "lng": -79.01969502253412,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "66 Pittmann Cres, Ajax, Ontario, L1S 3G3",
+                "extent": {
+                    "xmin": -79.021252,
+                    "ymin": 43.82396900000001,
+                    "xmax": -79.019252,
+                    "ymax": 43.82596900000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01969502253412,
+                        "y": 43.82508534081606
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Lakeside Public School 4 Parkes Drive Ajax ON L1S 4X1": {
+        "name": "Lakeside Public School",
+        "addr": "4 Parkes Drive",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 4X1",
+        "osm": {
+            "x": -79.0275220228912,
+            "y": 43.82364325,
+            "addr:housenumber": "4",
+            "addr:street": "Parkes Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "L1S 4X1"
+        },
+        "PolDivs": [
+            "35001-183-0-",
+            "35001-179-0-",
+            "35001-180-0-",
+            "35001-181-0-",
+            "35001-178-0-",
+            "35001-168-0-A",
+            "35001-182-0-",
+            "35001-184-0-",
+            "35001-168-0-B"
+        ]
+    },
+    "77 Falby (Lobby) 77 Falby Court Ajax ON L1S 4G7": {
+        "name": "77 Falby (Lobby)",
+        "addr": "77 Falby Court",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 4G7",
+        "PolDivs": [
+            "35001-400-0-"
+        ],
+        "arcgis": {
+            "address": "77 Falby Ct, Ajax, Ontario, L1S 4G7",
+            "bbox": {
+                "northeast": [
+                    43.84142159776124,
+                    -79.0153894676178
+                ],
+                "southwest": [
+                    43.839421597761245,
+                    -79.0173894676178
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.84042159776124,
+            "lng": -79.0163894676178,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "77 Falby Ct, Ajax, Ontario, L1S 4G7",
+                "extent": {
+                    "xmin": -79.0173894676178,
+                    "ymin": 43.839421597761245,
+                    "xmax": -79.0153894676178,
+                    "ymax": 43.84142159776124
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.0163894676178,
+                        "y": 43.84042159776124
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "66 Falby D.C.C. 33 66 Falby Court Ajax ON L1S 3L2": {
+        "name": "66 Falby D.C.C. 33",
+        "addr": "66 Falby Court",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3L2",
+        "PolDivs": [
+            "35001-401-0-"
+        ],
+        "arcgis": {
+            "address": "66 Falby Ct, Ajax, Ontario, L1S 3L2",
+            "bbox": {
+                "northeast": [
+                    43.84136890476409,
+                    -79.01562046995352
+                ],
+                "southwest": [
+                    43.83936890476409,
+                    -79.01762046995353
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.84036890476409,
+            "lng": -79.01662046995352,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "66 Falby Ct, Ajax, Ontario, L1S 3L2",
+                "extent": {
+                    "xmin": -79.01762046995353,
+                    "ymin": 43.83936890476409,
+                    "xmax": -79.01562046995352,
+                    "ymax": 43.84136890476409
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01662046995352,
+                        "y": 43.84036890476409
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "55 Falby 55 Falby Court Ajax ON L1S 3W4": {
+        "name": "55 Falby",
+        "addr": "55 Falby Court",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3W4",
+        "PolDivs": [
+            "35001-402-0-"
+        ],
+        "arcgis": {
+            "address": "55 Falby Ct, Ajax, Ontario, L1S 3W4",
+            "bbox": {
+                "northeast": [
+                    43.84073800000001,
+                    -79.01464849999999
+                ],
+                "southwest": [
+                    43.83873800000001,
+                    -79.0166485
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.84055087696978,
+            "lng": -79.01600230013295,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "55 Falby Ct, Ajax, Ontario, L1S 3W4",
+                "extent": {
+                    "xmin": -79.0166485,
+                    "ymin": 43.83873800000001,
+                    "xmax": -79.01464849999999,
+                    "ymax": 43.84073800000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01600230013295,
+                        "y": 43.84055087696978
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "33 Falby Court (Lobby) 33 Falby Court Ajax ON L1S 3R3": {
+        "name": "33 Falby Court (Lobby)",
+        "addr": "33 Falby Court",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3R3",
+        "PolDivs": [
+            "35001-403-0-"
+        ],
+        "arcgis": {
+            "address": "33 Falby Ct, Ajax, Ontario, L1S 3R3",
+            "bbox": {
+                "northeast": [
+                    43.84069300000001,
+                    -79.0161605
+                ],
+                "southwest": [
+                    43.83869300000001,
+                    -79.01816050000001
+                ]
+            },
+            "confidence": 9,
+            "lat": 43.840245870333334,
+            "lng": -79.01740432956332,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "33 Falby Ct, Ajax, Ontario, L1S 3R3",
+                "extent": {
+                    "xmin": -79.01816050000001,
+                    "ymin": 43.83869300000001,
+                    "xmax": -79.0161605,
+                    "ymax": 43.84069300000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01740432956332,
+                        "y": 43.840245870333334
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "44 Falby D.C.C. 34 44 Falby Court Ajax ON L1S 3L1": {
+        "name": "44 Falby D.C.C. 34",
+        "addr": "44 Falby Court",
+        "city": "Ajax",
+        "prov": "ON",
+        "pocd": "L1S 3L1",
+        "PolDivs": [
+            "35001-404-0-"
+        ],
+        "arcgis": {
+            "address": "44 Falby Ct, Ajax, Ontario, L1S 3L1",
+            "bbox": {
+                "northeast": [
+                    43.84296199999999,
+                    -79.0148815
+                ],
+                "southwest": [
+                    43.83896199999999,
+                    -79.01888149999999
+                ]
+            },
+            "confidence": 8,
+            "lat": 43.84046914409339,
+            "lng": -79.01665770318526,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "44 Falby Ct, Ajax, Ontario, L1S 3L1",
+                "extent": {
+                    "xmin": -79.01888149999999,
+                    "ymin": 43.83896199999999,
+                    "xmax": -79.0148815,
+                    "ymax": 43.84296199999999
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -79.01665770318526,
+                        "y": 43.84046914409339
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Constance Lake Portable 37 Wawaskashoo Street Constance Lake ON P0L 1B0": {
+        "name": "Constance Lake Portable",
+        "addr": "37 Wawaskashoo Street",
+        "city": "Constance Lake",
+        "prov": "ON",
+        "pocd": "P0L 1B0",
+        "PolDivs": [
+            "35002-1-0-"
+        ],
+        "arcgis": {
+            "address": "Wa-Wa-Ska-Shoo St, Constance Lake, Cochrane District, Ontario, P0L",
+            "bbox": {
+                "northeast": [
+                    49.809159057394524,
+                    -84.14236209364805
+                ],
+                "southwest": [
+                    49.80715905739453,
+                    -84.14436209364806
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.808159057394526,
+            "lng": -84.14336209364805,
+            "ok": true,
+            "quality": "StreetName",
+            "raw": {
+                "name": "Wa-Wa-Ska-Shoo St, Constance Lake, Cochrane District, Ontario, P0L",
+                "extent": {
+                    "xmin": -84.14436209364806,
+                    "ymin": 49.80715905739453,
+                    "xmax": -84.14236209364805,
+                    "ymax": 49.809159057394524
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.14336209364805,
+                        "y": 49.808159057394526
+                    },
+                    "attributes": {
+                        "Score": 97.38,
+                        "Addr_Type": "StreetName"
+                    }
+                }
+            },
+            "score": 97.38,
+            "status": "OK"
+        }
+    },
+    "Conseil des Arts 75 9th Street North-East Hearst ON P0L 1N0": {
+        "name": "Conseil des Arts",
+        "addr": "75 9th Street North-East",
+        "city": "Hearst",
+        "prov": "ON",
+        "pocd": "P0L 1N0",
+        "PolDivs": [
+            "35002-7-0-",
+            "35002-600--",
+            "35002-9-0-",
+            "35002-12-0-",
+            "35002-44-0-",
+            "35002-6-0-",
+            "35002-5-0-",
+            "35002-11-0-",
+            "35002-3-0-",
+            "35002-10-0-",
+            "35002-8-0-",
+            "35002-4-0-",
+            "35002-2-0-"
+        ],
+        "arcgis": {
+            "address": "75 9th St, Hearst, Ontario, P0L",
+            "bbox": {
+                "northeast": [
+                    49.686447,
+                    -83.66158949999999
+                ],
+                "southwest": [
+                    49.680447,
+                    -83.66758949999999
+                ]
+            },
+            "confidence": 8,
+            "lat": 49.68369393086749,
+            "lng": -83.66613218927907,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "75 9th St, Hearst, Ontario, P0L",
+                "extent": {
+                    "xmin": -83.66758949999999,
+                    "ymin": 49.680447,
+                    "xmax": -83.66158949999999,
+                    "ymax": 49.686447
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -83.66613218927907,
+                        "y": 49.68369393086749
+                    },
+                    "attributes": {
+                        "Score": 99.05,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 99.05,
+            "status": "OK"
+        }
+    },
+    "Mattice Sports Complex 272 Third Street Mattice ON P0L 1T0": {
+        "name": "Mattice Sports Complex",
+        "addr": "272 Third Street",
+        "city": "Mattice",
+        "prov": "ON",
+        "pocd": "P0L 1T0",
+        "PolDivs": [
+            "35002-13-0-"
+        ],
+        "arcgis": {
+            "address": "272 3rd Ave, Mattice, Mattice-Val Cote, Ontario, P0L",
+            "bbox": {
+                "northeast": [
+                    49.609378000000014,
+                    -83.262149
+                ],
+                "southwest": [
+                    49.60737800000002,
+                    -83.264149
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.60838554371287,
+            "lng": -83.26320448819901,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "272 3rd Ave, Mattice, Mattice-Val Cote, Ontario, P0L",
+                "extent": {
+                    "xmin": -83.264149,
+                    "ymin": 49.60737800000002,
+                    "xmax": -83.262149,
+                    "ymax": 49.609378000000014
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -83.26320448819901,
+                        "y": 49.60838554371287
+                    },
+                    "attributes": {
+                        "Score": 98.36,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 98.36,
+            "status": "OK"
+        }
+    },
+    "Bonne Humeur Club 7 St. Antoine Road Opasatika ON P0L 1Z0": {
+        "name": "Bonne Humeur Club",
+        "addr": "7 St. Antoine Road",
+        "city": "Opasatika",
+        "prov": "ON",
+        "pocd": "P0L 1Z0",
+        "osm": {
+            "x": -82.8629382,
+            "y": 49.5276921,
+            "addr:street": "St. Antoine Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0L 1Z0"
+        },
+        "PolDivs": [
+            "35002-14-0-"
+        ]
+    },
+    "Val Rita Municipal Complex 2 l'Avenue de l'\u00c9glise Avenue Val Rita ON P0L 2G0": {
+        "name": "Val Rita Municipal Complex",
+        "addr": "2 l'Avenue de l'\u00c9glise Avenue",
+        "city": "Val Rita",
+        "prov": "ON",
+        "pocd": "P0L 2G0",
+        "PolDivs": [
+            "35002-17-0-",
+            "35002-16-0-",
+            "35002-15-0-"
+        ],
+        "arcgis": {
+            "address": "2 Avenue de l'Eglise, Val Rita, Val Rita-Harty, Ontario, P0L",
+            "bbox": {
+                "northeast": [
+                    49.44601925591136,
+                    -82.53920453324014
+                ],
+                "southwest": [
+                    49.444019255911364,
+                    -82.54120453324015
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.44501925591136,
+            "lng": -82.54020453324014,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "2 Avenue de l'Eglise, Val Rita, Val Rita-Harty, Ontario, P0L",
+                "extent": {
+                    "xmin": -82.54120453324015,
+                    "ymin": 49.444019255911364,
+                    "xmax": -82.53920453324014,
+                    "ymax": 49.44601925591136
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.54020453324014,
+                        "y": 49.44501925591136
+                    },
+                    "attributes": {
+                        "Score": 98.41,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 98.41,
+            "status": "OK"
+        }
+    },
+    "Smooth Rock Falls Community Centre 193 Gordon Avenue North-East Smooth Rock Falls ON P0L 2B0": {
+        "name": "Smooth Rock Falls Community Centre",
+        "addr": "193 Gordon Avenue North-East",
+        "city": "Smooth Rock Falls",
+        "prov": "ON",
+        "pocd": "P0L 2B0",
+        "osm": {
+            "x": -81.6208974,
+            "y": 49.2784155,
+            "addr:housenumber": "193",
+            "addr:street": "Gordon Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0L 2B0"
+        },
+        "PolDivs": [
+            "35002-20-0-",
+            "35002-19-0-",
+            "35002-18-0-",
+            "35002-21-0-"
+        ]
+    },
+    "Fauquier-Strickland Community Centre 25 chemin Grzela Road Fauquier ON P0L 1G0": {
+        "name": "Fauquier-Strickland Community Centre",
+        "addr": "25 chemin Grzela Road",
+        "city": "Fauquier",
+        "prov": "ON",
+        "pocd": "P0L 1G0",
+        "PolDivs": [
+            "35002-22-0-",
+            "35002-23-0-"
+        ],
+        "arcgis": {
+            "address": "P0L-1G0",
+            "bbox": {
+                "northeast": [
+                    49.31393200000006,
+                    -82.03888149999996
+                ],
+                "southwest": [
+                    49.31193200000006,
+                    -82.04088149999997
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.31293200000006,
+            "lng": -82.03988149999996,
+            "ok": true,
+            "quality": "PostalExt",
+            "raw": {
+                "name": "P0L-1G0",
+                "extent": {
+                    "xmin": -82.04088149999997,
+                    "ymin": 49.31193200000006,
+                    "xmax": -82.03888149999996,
+                    "ymax": 49.31393200000006
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.03988149999996,
+                        "y": 49.31293200000006
+                    },
+                    "attributes": {
+                        "Score": 86.67,
+                        "Addr_Type": "PostalExt"
+                    }
+                }
+            },
+            "score": 86.67,
+            "status": "OK"
+        }
+    },
+    "Moonbeam Community Centre 28 Albert Street Moonbeam ON P0L 1V0": {
+        "name": "Moonbeam Community Centre",
+        "addr": "28 Albert Street",
+        "city": "Moonbeam",
+        "prov": "ON",
+        "pocd": "P0L 1V0",
+        "osm": {
+            "x": -82.1520281,
+            "y": 49.3449152,
+            "addr:housenumber": "28",
+            "addr:street": "Albert Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0L 1V0"
+        },
+        "PolDivs": [
+            "35002-25-0-",
+            "35002-24-0-",
+            "35002-26-0-"
+        ]
+    },
+    "La Forge Community Centre 158 Brunetville Road Kapuskasing ON P5N 2H3": {
+        "name": "La Forge Community Centre",
+        "addr": "158 Brunetville Road",
+        "city": "Kapuskasing",
+        "prov": "ON",
+        "pocd": "P5N 2H3",
+        "osm": {
+            "x": -82.4020857102753,
+            "y": 49.4209924,
+            "addr:housenumber": "158",
+            "addr:street": "Brunetville Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P5N 2H3"
+        },
+        "PolDivs": [
+            "35002-30-0-",
+            "35002-27-0-",
+            "35002-29-0-",
+            "35002-28-0-",
+            "35002-31-0-",
+            "35002-41-0-"
+        ]
+    },
+    "Centre de Loisirs 7 Aurora Avenue Kapuskasing ON P5N 1J6": {
+        "name": "Centre de Loisirs",
+        "addr": "7 Aurora Avenue",
+        "city": "Kapuskasing",
+        "prov": "ON",
+        "pocd": "P5N 1J6",
+        "osm": {
+            "x": -82.4293321,
+            "y": 49.4198949,
+            "addr:housenumber": "7",
+            "addr:street": "Aurora Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P5N 1J6"
+        },
+        "PolDivs": [
+            "35002-33-0-",
+            "35002-32-0-",
+            "35002-603--",
+            "35002-34-0-",
+            "35002-39-0-",
+            "35002-35-0-",
+            "35002-38-0-",
+            "35002-601--",
+            "35002-40-0-",
+            "35002-37-0-",
+            "35002-36-0-"
+        ]
+    },
+    "Hornepayne Royal Canadian Legion 48 Sixth Avenue Hornepayne ON P0M 1Z0": {
+        "name": "Hornepayne Royal Canadian Legion",
+        "addr": "48 Sixth Avenue",
+        "city": "Hornepayne",
+        "prov": "ON",
+        "pocd": "P0M 1Z0",
+        "PolDivs": [
+            "35002-43-0-",
+            "35002-42-0-"
+        ],
+        "arcgis": {
+            "address": "48 6th Ave, Hornepayne, Ontario, P0M",
+            "bbox": {
+                "northeast": [
+                    49.21618971867694,
+                    -84.77465811551014
+                ],
+                "southwest": [
+                    49.21418971867694,
+                    -84.77665811551014
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.21518971867694,
+            "lng": -84.77565811551014,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "48 6th Ave, Hornepayne, Ontario, P0M",
+                "extent": {
+                    "xmin": -84.77665811551014,
+                    "ymin": 49.21418971867694,
+                    "xmax": -84.77465811551014,
+                    "ymax": 49.21618971867694
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.77565811551014,
+                        "y": 49.21518971867694
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "White River Seniors Harmony Club 309 Spruce Street White River ON P0M 3G0": {
+        "name": "White River Seniors Harmony Club",
+        "addr": "309 Spruce Street",
+        "city": "White River",
+        "prov": "ON",
+        "pocd": "P0M 3G0",
+        "osm": {
+            "x": -85.2779691,
+            "y": 48.589559,
+            "addr:street": "Spruce Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0M"
+        },
+        "PolDivs": [
+            "35002-46-0-",
+            "35002-45-0-",
+            "35002-605--"
+        ]
+    },
+    "Dubreuilville Social and Cultural Centre 23 des Pins Street Dubreuilville ON P0S 1B0": {
+        "name": "Dubreuilville Social and Cultural Centre",
+        "addr": "23 des Pins Street",
+        "city": "Dubreuilville",
+        "prov": "ON",
+        "pocd": "P0S 1B0",
+        "PolDivs": [
+            "35002-606--",
+            "35002-48-0-",
+            "35002-47-0-"
+        ],
+        "arcgis": {
+            "address": "23 Pins St, Dubreuilville, Ontario, P0S",
+            "bbox": {
+                "northeast": [
+                    48.352104401717234,
+                    -84.54631215041296
+                ],
+                "southwest": [
+                    48.35010440171724,
+                    -84.54831215041297
+                ]
+            },
+            "confidence": 9,
+            "lat": 48.35110440171724,
+            "lng": -84.54731215041296,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "23 Pins St, Dubreuilville, Ontario, P0S",
+                "extent": {
+                    "xmin": -84.54831215041297,
+                    "ymin": 48.35010440171724,
+                    "xmax": -84.54631215041296,
+                    "ymax": 48.352104401717234
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.54731215041296,
+                        "y": 48.35110440171724
+                    },
+                    "attributes": {
+                        "Score": 99.99,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 99.99,
+            "status": "OK"
+        }
+    },
+    "Missarenda Consolidated Public School  Missanabie ON P0M 2H0": {
+        "name": "Missarenda Consolidated Public School",
+        "addr": "",
+        "city": "Missanabie",
+        "prov": "ON",
+        "pocd": "P0M 2H0",
+        "PolDivs": [
+            "35002-49-0-"
+        ],
+        "arcgis": {
+            "address": "P0M-2H0",
+            "bbox": {
+                "northeast": [
+                    48.312340000000056,
+                    -84.08333949999995
+                ],
+                "southwest": [
+                    48.31034000000006,
+                    -84.08533949999996
+                ]
+            },
+            "confidence": 9,
+            "lat": 48.31134000000006,
+            "lng": -84.08433949999996,
+            "ok": true,
+            "quality": "PostalExt",
+            "raw": {
+                "name": "P0M-2H0",
+                "extent": {
+                    "xmin": -84.08533949999996,
+                    "ymin": 48.31034000000006,
+                    "xmax": -84.08333949999995,
+                    "ymax": 48.312340000000056
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.08433949999996,
+                        "y": 48.31134000000006
+                    },
+                    "attributes": {
+                        "Score": 98.49,
+                        "Addr_Type": "PostalExt"
+                    }
+                }
+            },
+            "score": 98.49,
+            "status": "OK"
+        }
+    },
+    "Hawk Junction Community Hall 96 Cedar Street Hawk Junction ON P0S 1G0": {
+        "name": "Hawk Junction Community Hall",
+        "addr": "96 Cedar Street",
+        "city": "Hawk Junction",
+        "prov": "ON",
+        "pocd": "P0S 1G0",
+        "PolDivs": [
+            "35002-50-0-"
+        ],
+        "arcgis": {
+            "address": "Cedar St, Hawk Junction, Algoma, Ontario, P0S",
+            "bbox": {
+                "northeast": [
+                    48.090834227008,
+                    -84.55843773108776
+                ],
+                "southwest": [
+                    48.08883422700801,
+                    -84.56043773108777
+                ]
+            },
+            "confidence": 9,
+            "lat": 48.089834227008005,
+            "lng": -84.55943773108777,
+            "ok": true,
+            "quality": "StreetName",
+            "raw": {
+                "name": "Cedar St, Hawk Junction, Algoma, Ontario, P0S",
+                "extent": {
+                    "xmin": -84.56043773108777,
+                    "ymin": 48.08883422700801,
+                    "xmax": -84.55843773108776,
+                    "ymax": 48.090834227008
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.55943773108777,
+                        "y": 48.089834227008005
+                    },
+                    "attributes": {
+                        "Score": 98.21,
+                        "Addr_Type": "StreetName"
+                    }
+                }
+            },
+            "score": 98.21,
+            "status": "OK"
+        }
+    },
+    "Michipicoten Memorial Community Centre 3 Chris Simon Drive Wawa ON P0S 1K0": {
+        "name": "Michipicoten Memorial Community Centre",
+        "addr": "3 Chris Simon Drive",
+        "city": "Wawa",
+        "prov": "ON",
+        "pocd": "P0S 1K0",
+        "PolDivs": [
+            "35002-52-0-",
+            "35002-55-0-",
+            "35002-56-0-",
+            "35002-51-0-",
+            "35002-58-0-",
+            "35002-53-0-",
+            "35002-54-0-",
+            "35002-57-0-"
+        ],
+        "arcgis": {
+            "address": "P0S-1K0",
+            "bbox": {
+                "northeast": [
+                    47.93434900000005,
+                    -84.81623199999996
+                ],
+                "southwest": [
+                    47.93234900000005,
+                    -84.81823199999997
+                ]
+            },
+            "confidence": 9,
+            "lat": 47.93334900000005,
+            "lng": -84.81723199999996,
+            "ok": true,
+            "quality": "PostalExt",
+            "raw": {
+                "name": "P0S-1K0",
+                "extent": {
+                    "xmin": -84.81823199999997,
+                    "ymin": 47.93234900000005,
+                    "xmax": -84.81623199999996,
+                    "ymax": 47.93434900000005
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.81723199999996,
+                        "y": 47.93334900000005
+                    },
+                    "attributes": {
+                        "Score": 86.67,
+                        "Addr_Type": "PostalExt"
+                    }
+                }
+            },
+            "score": 86.67,
+            "status": "OK"
+        }
+    },
+    "Pic Mobert First Nation Recreation Complex 118 1st Street Pic Mobert ON P0M 2J0": {
+        "name": "Pic Mobert First Nation Recreation Complex",
+        "addr": "118 1st Street",
+        "city": "Pic Mobert",
+        "prov": "ON",
+        "pocd": "P0M 2J0",
+        "PolDivs": [
+            "35002-59-0-"
+        ],
+        "arcgis": {
+            "address": "118 1st St, Hornepayne, Ontario, P0M",
+            "bbox": {
+                "northeast": [
+                    49.2158949076655,
+                    -84.77531981574236
+                ],
+                "southwest": [
+                    49.213894907665505,
+                    -84.77731981574237
+                ]
+            },
+            "confidence": 9,
+            "lat": 49.2148949076655,
+            "lng": -84.77631981574237,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "118 1st St, Hornepayne, Ontario, P0M",
+                "extent": {
+                    "xmin": -84.77731981574237,
+                    "ymin": 49.213894907665505,
+                    "xmax": -84.77531981574236,
+                    "ymax": 49.2158949076655
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -84.77631981574237,
+                        "y": 49.2148949076655
+                    },
+                    "attributes": {
+                        "Score": 97.43,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 97.43,
+            "status": "OK"
+        }
+    },
+    "Foleyet Community Centre 25 Sherry Avenue Foleyet ON P0M 1T0": {
+        "name": "Foleyet Community Centre",
+        "addr": "25 Sherry Avenue",
+        "city": "Foleyet",
+        "prov": "ON",
+        "pocd": "P0M 1T0",
+        "addr:city": "Unorganized North Sudbury",
+        "osm": {
+            "x": -82.4427072,
+            "y": 48.2438789,
+            "addr:street": "Sherry Avenue",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0M 1T0"
+        },
+        "PolDivs": [
+            "35002-60-0-"
+        ]
+    },
+    "Chapleau Recreation Centre 4 Maple Street Chapleau ON P0M 1K0": {
+        "name": "Chapleau Recreation Centre",
+        "addr": "4 Maple Street",
+        "city": "Chapleau",
+        "prov": "ON",
+        "pocd": "P0M 1K0",
+        "osm": {
+            "x": -83.4060094,
+            "y": 47.8383412,
+            "addr:street": "Maple Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0M 1K0"
+        },
+        "PolDivs": [
+            "35002-65-0-",
+            "35002-64-0-",
+            "35002-62-0-",
+            "35002-63-0-",
+            "35002-61-0-",
+            "35002-66-0-"
+        ]
+    },
+    "A.D.S.A.B. - Board Room 1 Collver Road Thessalon ON P0R 1L0": {
+        "name": "A.D.S.A.B. - Board Room",
+        "addr": "1 Collver Road",
+        "city": "Thessalon",
+        "prov": "ON",
+        "pocd": "P0R 1L0",
+        "PolDivs": [
+            "35002-67-0-",
+            "35002-139-0-",
+            "35002-138-0-"
+        ],
+        "arcgis": {
+            "address": "1 Collver Rd, Huron Shores, Ontario, P0R 1L0",
+            "bbox": {
+                "northeast": [
+                    46.29753794497986,
+                    -83.57276870331583
+                ],
+                "southwest": [
+                    46.29553794497986,
+                    -83.57476870331584
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.29653794497986,
+            "lng": -83.57376870331584,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "1 Collver Rd, Huron Shores, Ontario, P0R 1L0",
+                "extent": {
+                    "xmin": -83.57476870331584,
+                    "ymin": 46.29553794497986,
+                    "xmax": -83.57276870331583,
+                    "ymax": 46.29753794497986
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -83.57376870331584,
+                        "y": 46.29653794497986
+                    },
+                    "attributes": {
+                        "Score": 97.79,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 97.79,
+            "status": "OK"
+        }
+    },
+    "Iron Bridge Lion's Hall 10 Clarissa Street Iron Bridge ON P0R 1H0": {
+        "name": "Iron Bridge Lion's Hall",
+        "addr": "10 Clarissa Street",
+        "city": "Iron Bridge",
+        "prov": "ON",
+        "pocd": "P0R 1H0",
+        "osm": {
+            "x": -83.2210451,
+            "y": 46.2808655,
+            "addr:housenumber": "10",
+            "addr:street": "Clarissa Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0R 1H0"
+        },
+        "PolDivs": [
+            "35002-68-0-",
+            "35002-69-0-"
+        ]
+    },
+    "Massey Royal Canadian Legion Branch 432 320 Imperial Street South Massey ON P0P 1P0": {
+        "name": "Massey Royal Canadian Legion Branch 432",
+        "addr": "320 Imperial Street South",
+        "city": "Massey",
+        "prov": "ON",
+        "pocd": "P0P 1P0",
+        "addr:city": "Sables-Spanish Rivers",
+        "osm": {
+            "x": -82.0773072777778,
+            "y": 46.2111194777778,
+            "addr:housenumber": "320",
+            "addr:street": "Imperial Street S",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0P 1P0"
+        },
+        "PolDivs": [
+            "35002-615--",
+            "35002-73-0-",
+            "35002-70-0-",
+            "35002-71-0-",
+            "35002-72-0-"
+        ]
+    },
+    "Webbwood Senior Citizens Club 16 Main Street Webbwood ON P0P 2G0": {
+        "name": "Webbwood Senior Citizens Club",
+        "addr": "16 Main Street",
+        "city": "Webbwood",
+        "prov": "ON",
+        "pocd": "P0P 2G0",
+        "PolDivs": [
+            "35002-75-0-",
+            "35002-74-0-"
+        ],
+        "arcgis": {
+            "address": "16 Main St, Billings, Ontario, P0P",
+            "bbox": {
+                "northeast": [
+                    45.89985836986929,
+                    -82.25469525291196
+                ],
+                "southwest": [
+                    45.8978583698693,
+                    -82.25669525291197
+                ]
+            },
+            "confidence": 9,
+            "lat": 45.898858369869295,
+            "lng": -82.25569525291196,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "16 Main St, Billings, Ontario, P0P",
+                "extent": {
+                    "xmin": -82.25669525291197,
+                    "ymin": 45.8978583698693,
+                    "xmax": -82.25469525291196,
+                    "ymax": 45.89985836986929
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.25569525291196,
+                        "y": 45.898858369869295
+                    },
+                    "attributes": {
+                        "Score": 97.65,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 97.65,
+            "status": "OK"
+        }
+    },
+    "Nairn Community Centre 64 McIntyre Street Nairn Centre ON P0M 2L0": {
+        "name": "Nairn Community Centre",
+        "addr": "64 McIntyre Street",
+        "city": "Nairn Centre",
+        "prov": "ON",
+        "pocd": "P0M 2L0",
+        "addr:city": "Nairn and Hyman",
+        "osm": {
+            "x": -81.586852,
+            "y": 46.3328786,
+            "addr:street": "McIntyre Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0M 2L0"
+        },
+        "PolDivs": [
+            "35002-76-0-"
+        ]
+    },
+    "Baldwin Recreational Facility 9 Short Street McKerrow ON P0P 1M0": {
+        "name": "Baldwin Recreational Facility",
+        "addr": "9 Short Street",
+        "city": "McKerrow",
+        "prov": "ON",
+        "pocd": "P0P 1M0",
+        "addr:city": "Baldwin",
+        "osm": {
+            "x": -81.7506281,
+            "y": 46.2884783,
+            "addr:street": "Short Street",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0P 1M0"
+        },
+        "PolDivs": [
+            "35002-77-0-"
+        ]
+    },
+    "Espanola Regional Recreation Complex 175 Avery Drive Espanola ON P5E 1S6": {
+        "name": "Espanola Regional Recreation Complex",
+        "addr": "175 Avery Drive",
+        "city": "Espanola",
+        "prov": "ON",
+        "pocd": "P5E 1S6",
+        "osm": {
+            "x": -81.7679224,
+            "y": 46.2570346,
+            "addr:street": "Avery Drive",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P5E 1G3"
+        },
+        "PolDivs": [
+            "35002-79-0-",
+            "35002-85-0-",
+            "35002-86-0-",
+            "35002-80-0-",
+            "35002-82-0-",
+            "35002-83-0-",
+            "35002-81-0-",
+            "35002-78-0-",
+            "35002-84-0-"
+        ]
+    },
+    "Lee Valley Community Hall 983 Lee Valley Road Massey ON P0P 1P0": {
+        "name": "Lee Valley Community Hall",
+        "addr": "983 Lee Valley Road",
+        "city": "Massey",
+        "prov": "ON",
+        "pocd": "P0P 1P0",
+        "PolDivs": [
+            "35002-87-0-"
+        ],
+        "arcgis": {
+            "address": "983 Lee Valley Rd, Sables-Spanish Rivers, Ontario, P0P 1P0",
+            "bbox": {
+                "northeast": [
+                    46.20648928255435,
+                    -81.92899984161038
+                ],
+                "southwest": [
+                    46.204489282554356,
+                    -81.93099984161039
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.20548928255435,
+            "lng": -81.92999984161038,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "983 Lee Valley Rd, Sables-Spanish Rivers, Ontario, P0P 1P0",
+                "extent": {
+                    "xmin": -81.93099984161039,
+                    "ymin": 46.204489282554356,
+                    "xmax": -81.92899984161038,
+                    "ymax": 46.20648928255435
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -81.92999984161038,
+                        "y": 46.20548928255435
+                    },
+                    "attributes": {
+                        "Score": 98.33,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 98.33,
+            "status": "OK"
+        }
+    },
+    "Rainbow Country Recreation Centre 1052 Whitefish Falls Road Whitefish Falls ON P0P 2H0": {
+        "name": "Rainbow Country Recreation Centre",
+        "addr": "1052 Whitefish Falls Road",
+        "city": "Whitefish Falls",
+        "prov": "ON",
+        "pocd": "P0P 2H0",
+        "PolDivs": [
+            "35002-88-0-"
+        ],
+        "arcgis": {
+            "address": "Whitefish Falls, Sudbury District, Ontario",
+            "bbox": {
+                "northeast": [
+                    46.12655000000007,
+                    -81.72160999999998
+                ],
+                "southwest": [
+                    46.10655000000008,
+                    -81.74161
+                ]
+            },
+            "confidence": 7,
+            "lat": 46.116550000000075,
+            "lng": -81.73160999999999,
+            "ok": true,
+            "quality": "Locality",
+            "raw": {
+                "name": "Whitefish Falls, Sudbury District, Ontario",
+                "extent": {
+                    "xmin": -81.74161,
+                    "ymin": 46.10655000000008,
+                    "xmax": -81.72160999999998,
+                    "ymax": 46.12655000000007
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -81.73160999999999,
+                        "y": 46.116550000000075
+                    },
+                    "attributes": {
+                        "Score": 88.8,
+                        "Addr_Type": "Locality"
+                    }
+                }
+            },
+            "score": 88.8,
+            "status": "OK"
+        }
+    },
+    "Whitefish River First Nation Community Centre 6 Rainbow  Valley Road Birch Island ON P0P 1A0": {
+        "name": "Whitefish River First Nation Community Centre",
+        "addr": "6 Rainbow  Valley Road",
+        "city": "Birch Island",
+        "prov": "ON",
+        "pocd": "P0P 1A0",
+        "PolDivs": [
+            "35002-89-0-"
+        ],
+        "arcgis": {
+            "address": "P0P-1A0",
+            "bbox": {
+                "northeast": [
+                    46.06719100000006,
+                    -81.77263899999996
+                ],
+                "southwest": [
+                    46.06519100000006,
+                    -81.77463899999996
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.06619100000006,
+            "lng": -81.77363899999996,
+            "ok": true,
+            "quality": "PostalExt",
+            "raw": {
+                "name": "P0P-1A0",
+                "extent": {
+                    "xmin": -81.77463899999996,
+                    "ymin": 46.06519100000006,
+                    "xmax": -81.77263899999996,
+                    "ymax": 46.06719100000006
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -81.77363899999996,
+                        "y": 46.06619100000006
+                    },
+                    "attributes": {
+                        "Score": 86.67,
+                        "Addr_Type": "PostalExt"
+                    }
+                }
+            },
+            "score": 86.67,
+            "status": "OK"
+        }
+    },
+    "Little Current-Howland Recreation Centre 9001 Highway 6 Little Current ON P0P 1K0": {
+        "name": "Little Current-Howland Recreation Centre",
+        "addr": "9001 Highway 6",
+        "city": "Little Current",
+        "prov": "ON",
+        "pocd": "P0P 1K0",
+        "osm": {
+            "x": -81.9074089,
+            "y": 45.934429,
+            "addr:street": "Highway 6",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0P 1W0"
+        },
+        "PolDivs": [
+            "35002-91-0-",
+            "35002-93-0-",
+            "35002-90-0-",
+            "35002-92-0-",
+            "35002-94-0-",
+            "35002-620--"
+        ]
+    },
+    "Sagamok Millenium Building 8-610 Reserve Road Massey ON P0P 1P0": {
+        "name": "Sagamok Millenium Building",
+        "addr": "8-610 Reserve Road",
+        "city": "Massey",
+        "prov": "ON",
+        "pocd": "P0P 1P0",
+        "osm": {
+            "x": -82.1000849,
+            "y": 46.1697832,
+            "addr:street": "Reserve Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0P 1P0"
+        },
+        "PolDivs": [
+            "35002-95-0-"
+        ]
+    },
+    "Walford Community Centre 410 Highway 17 Walford Station ON P0P 2E0": {
+        "name": "Walford Community Centre",
+        "addr": "410 Highway 17",
+        "city": "Walford Station",
+        "prov": "ON",
+        "pocd": "P0P 2E0",
+        "PolDivs": [
+            "35002-96-0-"
+        ],
+        "arcgis": {
+            "address": "410 HWY-17, Walford Station, Sables-Spanish Rivers, Ontario, P0P",
+            "bbox": {
+                "northeast": [
+                    46.20649407487269,
+                    -82.24164310942932
+                ],
+                "southwest": [
+                    46.20449407487269,
+                    -82.24364310942933
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.20549407487269,
+            "lng": -82.24264310942932,
+            "ok": true,
+            "quality": "StreetAddressExt",
+            "raw": {
+                "name": "410 HWY-17, Walford Station, Sables-Spanish Rivers, Ontario, P0P",
+                "extent": {
+                    "xmin": -82.24364310942933,
+                    "ymin": 46.20449407487269,
+                    "xmax": -82.24164310942932,
+                    "ymax": 46.20649407487269
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.24264310942932,
+                        "y": 46.20549407487269
+                    },
+                    "attributes": {
+                        "Score": 98.9,
+                        "Addr_Type": "StreetAddressExt"
+                    }
+                }
+            },
+            "score": 98.9,
+            "status": "OK"
+        }
+    },
+    "Municipal Office - Council Chambers of Spanish 8 Trunk Road Spanish ON P0P 2A0": {
+        "name": "Municipal Office - Council Chambers of Spanish",
+        "addr": "8 Trunk Road",
+        "city": "Spanish",
+        "prov": "ON",
+        "pocd": "P0P 2A0",
+        "osm": {
+            "x": -82.34608503238,
+            "y": 46.1922774718302,
+            "addr:housenumber": "8",
+            "addr:street": "Trunk Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P0P 2A0"
+        },
+        "PolDivs": [
+            "35002-98-0-",
+            "35002-97-0-"
+        ]
+    },
+    "Villa Fran\u00e7aise-des-Jeunes 11 Edinburgh Road Elliot Lake ON P5A 2M3": {
+        "name": "Villa Fran\u00e7aise-des-Jeunes",
+        "addr": "11 Edinburgh Road",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 2M3",
+        "PolDivs": [
+            "35002-100-0-",
+            "35002-115-0-",
+            "35002-102-0-",
+            "35002-119-0-",
+            "35002-105-0-",
+            "35002-101-0-",
+            "35002-99-0-",
+            "35002-118-0-",
+            "35002-104-0-"
+        ],
+        "arcgis": {
+            "address": "11 Edinburgh Rd, Elliot Lake, Ontario, P5A 2M3",
+            "bbox": {
+                "northeast": [
+                    46.37971000000001,
+                    -82.66326199999999
+                ],
+                "southwest": [
+                    46.377710000000015,
+                    -82.665262
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.37896254674263,
+            "lng": -82.664262,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "11 Edinburgh Rd, Elliot Lake, Ontario, P5A 2M3",
+                "extent": {
+                    "xmin": -82.665262,
+                    "ymin": 46.377710000000015,
+                    "xmax": -82.66326199999999,
+                    "ymax": 46.37971000000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.664262,
+                        "y": 46.37896254674263
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "White Mountain Building 99 Spine Road Elliot Lake ON P5A 3S9": {
+        "name": "White Mountain Building",
+        "addr": "99 Spine Road",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 3S9",
+        "addr:city": "Elliot Lake",
+        "osm": {
+            "x": -82.6625987,
+            "y": 46.383738,
+            "addr:housenumber": "99",
+            "addr:street": "Spine Road",
+            "addr:state": "Ontario",
+            "addr:country": "Canada",
+            "addr:postal": "P5A 3S9"
+        },
+        "PolDivs": [
+            "35002-107-0-",
+            "35002-613--",
+            "35002-103-0-",
+            "35002-614--",
+            "35002-106-0-"
+        ]
+    },
+    "Hillside Park Retirement Residence 11 Mississauga Avenue Elliot Lake ON P5A 1E1": {
+        "name": "Hillside Park Retirement Residence",
+        "addr": "11 Mississauga Avenue",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 1E1",
+        "PolDivs": [
+            "35002-108-0-"
+        ],
+        "arcgis": {
+            "address": "11 Mississauga Ave, Elliot Lake, Ontario, P5A 1E1",
+            "bbox": {
+                "northeast": [
+                    46.38036273572801,
+                    -82.65071955887778
+                ],
+                "southwest": [
+                    46.37836273572802,
+                    -82.65271955887779
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.379362735728016,
+            "lng": -82.65171955887779,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "11 Mississauga Ave, Elliot Lake, Ontario, P5A 1E1",
+                "extent": {
+                    "xmin": -82.65271955887779,
+                    "ymin": 46.37836273572802,
+                    "xmax": -82.65071955887778,
+                    "ymax": 46.38036273572801
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.65171955887779,
+                        "y": 46.379362735728016
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "New Life Pentecostal Assembly 20 Esten Drive South Elliot Lake ON P5A 3N8": {
+        "name": "New Life Pentecostal Assembly",
+        "addr": "20 Esten Drive South",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 3N8",
+        "PolDivs": [
+            "35002-109-0-",
+            "35002-111-0-",
+            "35002-110-0-"
+        ],
+        "arcgis": {
+            "address": "20 Esten Dr S, Elliot Lake, Ontario, P5A 3N8",
+            "bbox": {
+                "northeast": [
+                    46.36699955827258,
+                    -82.61999665992745
+                ],
+                "southwest": [
+                    46.36499955827259,
+                    -82.62199665992746
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.365999558272584,
+            "lng": -82.62099665992746,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "20 Esten Dr S, Elliot Lake, Ontario, P5A 3N8",
+                "extent": {
+                    "xmin": -82.62199665992746,
+                    "ymin": 46.36499955827259,
+                    "xmax": -82.61999665992745,
+                    "ymax": 46.36699955827258
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.62099665992746,
+                        "y": 46.365999558272584
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Our Lady of Lourdes School 139 Mississauga Avenue Elliot Lake ON P5A 1E3": {
+        "name": "Our Lady of Lourdes School",
+        "addr": "139 Mississauga Avenue",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 1E3",
+        "PolDivs": [
+            "35002-112-0-",
+            "35002-121-0-A",
+            "35002-116-0-",
+            "35002-117-0-",
+            "35002-120-0-"
+        ],
+        "arcgis": {
+            "address": "139 Mississauga Ave, Elliot Lake, Ontario, P5A 1E3",
+            "bbox": {
+                "northeast": [
+                    46.371862000000014,
+                    -82.65103099999999
+                ],
+                "southwest": [
+                    46.36986200000002,
+                    -82.653031
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.370996864822075,
+            "lng": -82.65221481513659,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "139 Mississauga Ave, Elliot Lake, Ontario, P5A 1E3",
+                "extent": {
+                    "xmin": -82.653031,
+                    "ymin": 46.36986200000002,
+                    "xmax": -82.65103099999999,
+                    "ymax": 46.371862000000014
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.65221481513659,
+                        "y": 46.370996864822075
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Warsaw Apartments 100 Warsaw Place Elliot Lake ON P5A 2S8": {
+        "name": "Warsaw Apartments",
+        "addr": "100 Warsaw Place",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 2S8",
+        "PolDivs": [
+            "35002-113-0-"
+        ],
+        "arcgis": {
+            "address": "100 Warsaw Pl, Elliot Lake, Ontario, P5A 2S8",
+            "bbox": {
+                "northeast": [
+                    46.381090151439516,
+                    -82.66967631977164
+                ],
+                "southwest": [
+                    46.37909015143952,
+                    -82.67167631977165
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.38009015143952,
+            "lng": -82.67067631977164,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "100 Warsaw Pl, Elliot Lake, Ontario, P5A 2S8",
+                "extent": {
+                    "xmin": -82.67167631977165,
+                    "ymin": 46.37909015143952,
+                    "xmax": -82.66967631977164,
+                    "ymax": 46.381090151439516
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.67067631977164,
+                        "y": 46.38009015143952
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Washington Crescent Apartments 1 Washington Crescent Elliot Lake ON P5A 2W9": {
+        "name": "Washington Crescent Apartments",
+        "addr": "1 Washington Crescent",
+        "city": "Elliot Lake",
+        "prov": "ON",
+        "pocd": "P5A 2W9",
+        "PolDivs": [
+            "35002-114-0-"
+        ],
+        "arcgis": {
+            "address": "1 Washington Cres, Elliot Lake, Ontario, P5A 2W9",
+            "bbox": {
+                "northeast": [
+                    46.379026,
+                    -82.67151949999999
+                ],
+                "southwest": [
+                    46.37702600000001,
+                    -82.6735195
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.37782299030514,
+            "lng": -82.67238689829179,
+            "ok": true,
+            "quality": "PointAddress",
+            "raw": {
+                "name": "1 Washington Cres, Elliot Lake, Ontario, P5A 2W9",
+                "extent": {
+                    "xmin": -82.6735195,
+                    "ymin": 46.37702600000001,
+                    "xmax": -82.67151949999999,
+                    "ymax": 46.379026
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.67238689829179,
+                        "y": 46.37782299030514
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "PointAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Rockhaven School for Exceptional Children 1459 Riverview Drive Serpent River ON P0P 1K0": {
+        "name": "Rockhaven School for Exceptional Children",
+        "addr": "1459 Riverview Drive",
+        "city": "Serpent River",
+        "prov": "ON",
+        "pocd": "P0P 1K0",
+        "PolDivs": [
+            "35002-122-0-"
+        ],
+        "arcgis": {
+            "address": "1459 Riverview Rd, Serpent River, The North Shore, Ontario, P0P 1V0",
+            "bbox": {
+                "northeast": [
+                    46.210143217967946,
+                    -82.54123757249792
+                ],
+                "southwest": [
+                    46.20814321796795,
+                    -82.54323757249793
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.20914321796795,
+            "lng": -82.54223757249792,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "1459 Riverview Rd, Serpent River, The North Shore, Ontario, P0P 1V0",
+                "extent": {
+                    "xmin": -82.54323757249793,
+                    "ymin": 46.20814321796795,
+                    "xmax": -82.54123757249792,
+                    "ymax": 46.210143217967946
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.54223757249792,
+                        "y": 46.20914321796795
+                    },
+                    "attributes": {
+                        "Score": 98.36,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 98.36,
+            "status": "OK"
+        }
+    },
+    "Spragge Bible Church Highway 17 West Spragge ON P0R 1K0": {
+        "name": "Spragge Bible Church",
+        "addr": "Highway 17 West",
+        "city": "Spragge",
+        "prov": "ON",
+        "pocd": "P0R 1K0",
+        "PolDivs": [
+            "35002-123-0-"
+        ],
+        "arcgis": {
+            "address": "HWY-17, Spragge, The North Shore, Ontario, P0R 1K0",
+            "bbox": {
+                "northeast": [
+                    46.21303000000001,
+                    -82.570427
+                ],
+                "southwest": [
+                    46.211030000000015,
+                    -82.572427
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.21203000000001,
+            "lng": -82.571427,
+            "ok": true,
+            "quality": "StreetName",
+            "raw": {
+                "name": "HWY-17, Spragge, The North Shore, Ontario, P0R 1K0",
+                "extent": {
+                    "xmin": -82.572427,
+                    "ymin": 46.211030000000015,
+                    "xmax": -82.570427,
+                    "ymax": 46.21303000000001
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.571427,
+                        "y": 46.21203000000001
+                    },
+                    "attributes": {
+                        "Score": 98.79,
+                        "Addr_Type": "StreetName"
+                    }
+                }
+            },
+            "score": 98.79,
+            "status": "OK"
+        }
+    },
+    "Serpent River First Nation Community Hall 195 Village Road Cutler ON P0P 1B0": {
+        "name": "Serpent River First Nation Community Hall",
+        "addr": "195 Village Road",
+        "city": "Cutler",
+        "prov": "ON",
+        "pocd": "P0P 1B0",
+        "PolDivs": [
+            "35002-124-0-"
+        ],
+        "arcgis": {
+            "address": "195 Village Rd W, Cutler, The North Shore, Ontario, P0P 1B0",
+            "bbox": {
+                "northeast": [
+                    46.20520833539886,
+                    -82.47819534521844
+                ],
+                "southwest": [
+                    46.20320833539886,
+                    -82.48019534521845
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.20420833539886,
+            "lng": -82.47919534521844,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "195 Village Rd W, Cutler, The North Shore, Ontario, P0P 1B0",
+                "extent": {
+                    "xmin": -82.48019534521845,
+                    "ymin": 46.20320833539886,
+                    "xmax": -82.47819534521844,
+                    "ymax": 46.20520833539886
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.47919534521844,
+                        "y": 46.20420833539886
+                    },
+                    "attributes": {
+                        "Score": 99.62,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 99.62,
+            "status": "OK"
+        }
+    },
+    "Algoma Mills Municipal Office 1385 Highway 17 Algoma Mills ON P0R 1A0": {
+        "name": "Algoma Mills Municipal Office",
+        "addr": "1385 Highway 17",
+        "city": "Algoma Mills",
+        "prov": "ON",
+        "pocd": "P0R 1A0",
+        "PolDivs": [
+            "35002-125-0-"
+        ],
+        "arcgis": {
+            "address": "1385 HWY-17, Algoma Mills, The North Shore, Ontario, P0R",
+            "bbox": {
+                "northeast": [
+                    46.18837859153554,
+                    -82.81071022963388
+                ],
+                "southwest": [
+                    46.186378591535544,
+                    -82.8127102296339
+                ]
+            },
+            "confidence": 9,
+            "lat": 46.18737859153554,
+            "lng": -82.81171022963389,
+            "ok": true,
+            "quality": "StreetAddress",
+            "raw": {
+                "name": "1385 HWY-17, Algoma Mills, The North Shore, Ontario, P0R",
+                "extent": {
+                    "xmin": -82.8127102296339,
+                    "ymin": 46.186378591535544,
+                    "xmax": -82.81071022963388,
+                    "ymax": 46.18837859153554
+                },
+                "feature": {
+                    "geometry": {
+                        "x": -82.81171022963389,
+                        "y": 46.18737859153554
+                    },
+                    "attributes": {
+                        "Score": 100,
+                        "Addr_Type": "StreetAddress"
+                    }
+                }
+            },
+            "score": 100,
+            "status": "OK"
+        }
+    },
+    "Blind River Memorial Community Centre 110 Indiana Boulevard Blind River ON P0R 1B0": {
+        "name": "Blind River Memorial Community Centre",
+        "addr": "110 Indiana Boulevard"
