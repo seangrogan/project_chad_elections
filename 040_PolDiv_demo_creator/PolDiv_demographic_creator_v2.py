@@ -3,6 +3,7 @@ import csv
 import json
 import os
 import os.path
+import random
 from collections import namedtuple, defaultdict
 from multiprocessing import Pool, Process
 from os import path
@@ -213,10 +214,10 @@ def PolDiv_demo_creator(mp=False):
     DA_files, DB_data, PolDiv_DB_associations = get_files()
     PolDivs = list(PolDiv_DB_associations.keys())
     print(f"len p_div {len(PolDivs)}")
-    # random.shuffle(PolDivs)
+    random.shuffle(PolDivs)
     PolDivs = PolDivs.copy()
     n_divs = len(PolDivs)
-    PolDivs = PolDivs[0:-1:5]
+    # PolDivs = PolDivs[0:-1:5]
     print(f"len p_div {len(PolDivs)}")
     if mp:
         # with Pool(processes=3) as pool:
