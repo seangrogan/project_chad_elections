@@ -1,6 +1,7 @@
 import csv
 import json
-from collections import defaultdict, Counter
+from collections import defaultdict, OrderedDict, Counter
+from time import sleep
 
 import geocoder
 from tqdm import tqdm
@@ -9,13 +10,100 @@ from file_readers.read_csv_file import read_csv_file
 
 
 class Parameters:
-    PolLocAddrs = "/media/sean/F022FB6822FB31E8/" \
+    # PolLocAddrs = "/media/sean/F022FB6822FB31E8/" \
+    PolLocAddrs = "D:/" \
                   "gis_database/canada/polling_location_addresses/canada_polling_locations_19_10_2015_ontario.csv"
     APIKeys = "/home/sean/Desktop/prop_data/api_keys.json"
+
+def make_a_CSV():
+    data = get_data(file="addrs2.json")
+    output = []
+    header = ["ed_num", "pd_pfx", 'pd_sufx', 'pd_ab',
+              'lat', 'lon', 'site', 'addr', 'city', 'postcode', 'prov', 'quality', 'confidence']
+    for address, _info in data.items():
+        site, addr, city, postcode, prov = _info['name'], _info['addr'], _info['city'], _info['pocd'], _info['prov']
+        for poldiv in _info["PolDivs"]:
+            ed_num, pd_pfx, pd_sufx, pd_ab = poldiv.split('-')
+            lat, lon = _info.get("arcgis", {}).get('lat'), _info.get("arcgis", {}).get('lng')
+            quality, confidence = _info.get("arcgis", {}).get('quality'), _info.get("arcgis", {}).get('confidence')
+            row = dict(ed_num=ed_num, pd_pfx=pd_pfx, pd_sufx=pd_sufx, pd_ab=pd_ab,
+                       lat=lat, lon=lon, quality=quality, confidence=confidence,
+                       site=site, addr=addr, city=city, postcode=postcode, prov=prov)
+            output.append(row)
+        # print("tada")
+    with open("PolLocs.csv", "w", newline="") as outfile:
+        writer = csv.DictWriter(outfile, header)
+        writer.writeheader()
+        writer.writerows(output)
+
+
+def check_file():
+    data = get_data(file="addrs.json")
+    confidences, qualities = list(), list()
+    relations = list()
+    for address, information in data.items():
+        if "arcgis" in information:
+            confidence = information["arcgis"]["confidence"]
+            quality = information["arcgis"]["quality"]
+            if confidence < 7:
+                information.pop("arcgis")
+    counter1 = Counter(confidences)
+    counter2 = Counter(qualities)
+    counter3 = Counter(relations)
+    update_file(data, "addrs2.json")
+    pass
+
+
+def refactor_file(file="addrs.json"):
+    data1 = read_csv_file(Parameters.PolLocAddrs, encoding="utf-8-sig")
+    # data = [row for row in data if row.get('type').lower() == 'ordinary']
+    addresses_poldivs = defaultdict(set)
+    addresses = dict()
+    for row in data1:
+        addresses_poldivs[make_addr(row)].add(make_pdiv_id(row))
+        addresses[make_addr(row)] = make_addr_dict(row)
+    with open(file) as in_file:
+        data = json.load(in_file)
+    print()
+    new_data = dict()
+    osm_elems = {'x', 'y', 'addr:country', 'addr:housenumber', 'addr:postal', 'addr:state', 'addr:street'}
+    for k, v in data.items():
+        osm = {item: value for item, value in v.items() if item in osm_elems}
+        for item in osm_elems:
+            v.pop(item, None)
+        new_data[k] = v
+        if osm:
+            new_data[k].update({'osm': osm})
+        new_data[k].update({"PolDivs": list(addresses_poldivs[k])})
+        print()
+    for k, v in addresses.items():
+        if k not in new_data:
+            new_data[k] = v
+            new_data[k].update({"PolDivs": list(addresses_poldivs[k])})
+    update_file(new_data, file='addrs_refactored.json')
+
+
+def get_data(file="pol_div_geocoded.json"):
+    with open(file) as in_file:
+        data = json.load(in_file)
+    return data
+
+
+def update_file(data, file="addrs.json"):
+    with open(file, "w", newline='') as out_file:
+        json.dump(data, out_file, indent=4)
+
+
+def failed_addrs(data, file="failed_addrs.csv"):
+    with open(file, "w", newline='') as out_file:
+        writer = csv.writer(out_file)
+        for addr in data:
+            writer.writerow([addr])
 
 
 def main():
     print("Finding PolDiv addresses")
+    headers = ["name"]
     data = read_csv_file(Parameters.PolLocAddrs, encoding="utf-8-sig")
     data = [row for row in data if row.get('type').lower() == 'ordinary']
     print(f"nLines {len(data)}")
@@ -25,29 +113,44 @@ def main():
     addresses = dict()
     for row in data:
         addresses_poldivs[make_addr(row)].add(make_pdiv_id(row))
-        addresses[make_addr(row)]=make_addr_dict(row)
+        addresses[make_addr(row)] = make_addr_dict(row)
     print(f"nAddr {len(addresses_poldivs)}")
     print(f"nDivs {sum(len(val) for val in addresses_poldivs.values())}")
     failed = []
-    with open("/home/sean/Desktop/prop_data/api_keys.json") as keyfile:
+    # with open("/home/sean/Desktop/prop_data/api_keys.json") as keyfile:
+    with open("D:/gis_database/api_keys/api_keys.json") as keyfile:
         BingMapsAPIKey = json.load(keyfile)["bing_maps"]
-    for addr, split in tqdm(addresses.items()):
-        new_addr = f"{split['addr']} {split['city']}, {split['prov']} {split['pocd']} CANADA"
-        g = geocoder.osm(new_addr)
-        result = g.osm
-        if result is None:
-            failed.append(addr)
+    # addresses, headers = get_file()
+    # addresses = {make_addr2(row): row for row in addresses}
+    addresses = get_data("addrs.json")
+    p_bar = tqdm(total=len(addresses))
+    for addr, items in addresses.items():
+        p_bar.update()
+        # if 'osm' in items or 'arcgis' in items:
+        if 'arcgis' in items:
             continue
-        addresses[addr].update(result)
+        sleep(2)
+        new_addr = f"{items['addr']} {items['city']}, {items['prov']} {items['pocd']} CANADA"
+        p_bar.set_postfix(ordered_dict=OrderedDict(Address=new_addr, NumFailed=len(failed)))
+        result = None
+        # g = geocoder.osm(new_addr)
+        # result = g.osm
+        # service = 'osm'
+        if result is None:
+            g = geocoder.arcgis(new_addr)
+            result = g.json
+            service = 'arcgis'
+            if result is None:
+                failed.append(addr)
+                failed_addrs(failed)
+                continue
+        addresses[addr].update({service:result})
+        for key in addresses[addr]:
+            if key not in headers:
+                headers.append(key)
+        update_file(addresses)
     print(failed)
 
-    with open("addrs.csv", "w") as out_file:
-        key, val = addresses.copy().popitem()
-        header = list(val.keys())
-        writer = csv.DictWriter(out_file, header)
-        writer.writeheader()
-        for addr in addresses.values():
-            writer.writerow(addr)
     return 0
 
 
@@ -58,7 +161,13 @@ def make_pdiv_id(row):
 
 def make_addr(row):
     row_addr = f'{row.get("site_name_en")} {row.get("addr_en")} ' \
-               f'{row.get("municipality")} {row.get("province")} {row.get("postal_code")}'
+        f'{row.get("municipality")} {row.get("province")} {row.get("postal_code")}'
+    return row_addr
+
+
+def make_addr2(row):
+    row_addr = f'{row.get("name")} {row.get("addr")} ' \
+        f'{row.get("city")} {row.get("prov")} {row.get("pocd")}'
     return row_addr
 
 
@@ -71,5 +180,8 @@ def make_addr_dict(row):
         "pocd": row.get("postal_code")
     }
 
+
 if __name__ == '__main__':
-    main()
+    # main()
+    # check_file()
+    make_a_CSV()
