@@ -1,9 +1,12 @@
 import csv
 import json
 from collections import defaultdict, OrderedDict, Counter
+from math import sqrt
+from os import path
 from time import sleep
 
 import geocoder
+from pyproj import Proj, transform
 from tqdm import tqdm
 
 from file_readers.read_csv_file import read_csv_file
@@ -15,26 +18,93 @@ class Parameters:
                   "gis_database/canada/polling_location_addresses/canada_polling_locations_19_10_2015_ontario.csv"
     APIKeys = "/home/sean/Desktop/prop_data/api_keys.json"
 
+
 def make_a_CSV():
     data = get_data(file="addrs2.json")
+    poldiv_centers = get_data(file="../output/center_of_pdiv/pdiv_results20191003_154557.json")
     output = []
     header = ["ed_num", "pd_pfx", 'pd_sufx', 'pd_ab',
-              'lat', 'lon', 'site', 'addr', 'city', 'postcode', 'prov', 'quality', 'confidence']
-    for address, _info in data.items():
+              'pol_div_lat', 'pol_div_lon', 'pol_div_lam_x', 'pol_div_lam_y',
+              'site', 'addr', 'city', 'postcode', 'prov', 'quality',
+              'confidence',
+              'pol_loc_lat', 'pol_loc_lon', 'lambert_x', 'lambert_y',
+              'euclidean_meter', 'manhattan_meter', 'maximum_manhattan_meter'
+              ]
+    header += list(range(1, 2247 + 1))
+    pbar = tqdm(total=len(data), desc="Running")
+    for address, _info in list(data.items()):
+        pbar.update()
+        pbar.set_postfix_str(address[40:])
         site, addr, city, postcode, prov = _info['name'], _info['addr'], _info['city'], _info['pocd'], _info['prov']
         for poldiv in _info["PolDivs"]:
             ed_num, pd_pfx, pd_sufx, pd_ab = poldiv.split('-')
-            lat, lon = _info.get("arcgis", {}).get('lat'), _info.get("arcgis", {}).get('lng')
-            quality, confidence = _info.get("arcgis", {}).get('quality'), _info.get("arcgis", {}).get('confidence')
+            if pd_sufx == "":
+                pd_sufx = 0
+            if "arcgis" in _info and f"{ed_num}-{pd_pfx}-{pd_sufx}" in poldiv_centers:
+                if poldiv_centers[f"{ed_num}-{pd_pfx}-{pd_sufx}"]["pop_center"] is None:
+                    pol_div_lam_x, pol_div_lam_y = poldiv_centers[f"{ed_num}-{pd_pfx}-{pd_sufx}"]["map_center"]
+                else:
+                    pol_div_lam_x, pol_div_lam_y = poldiv_centers[f"{ed_num}-{pd_pfx}-{pd_sufx}"]["pop_center"]
+                pol_div_lon, pol_div_lat = to_wgs(pol_div_lam_x, pol_div_lam_y)
+                lat, lon = _info.get("arcgis", {}).get('lat'), _info.get("arcgis", {}).get('lng')
+                lambert_x, lambert_y = to_lambert(lat, lon)
+                quality, confidence = _info.get("arcgis", {}).get('quality'), _info.get("arcgis", {}).get('confidence')
+                euc_dist = sqrt(pow(lambert_x - pol_div_lam_x, 2) + pow(lambert_y - pol_div_lam_y, 2))
+                manhattan = abs(lambert_x - pol_div_lam_x) + abs(lambert_y - pol_div_lam_y)
+                max_manhattan = (euc_dist / sqrt(2))*2
+            else:
+                pol_div_lam_x, pol_div_lam_y, pol_div_lon, pol_div_lat, \
+                lat, lon, lambert_x, lambert_y, quality, confidence, \
+                euc_dist, manhattan, max_manhattan, *_ = [""] * 20
+
             row = dict(ed_num=ed_num, pd_pfx=pd_pfx, pd_sufx=pd_sufx, pd_ab=pd_ab,
-                       lat=lat, lon=lon, quality=quality, confidence=confidence,
-                       site=site, addr=addr, city=city, postcode=postcode, prov=prov)
+                       pol_loc_lat=lat, pol_loc_lon=lon, quality=quality, confidence=confidence,
+                       site=site, addr=addr, city=city, postcode=postcode, prov=prov,
+                       lambert_x=lambert_x, lambert_y=lambert_y,
+                       pol_div_lat=pol_div_lat, pol_div_lon=pol_div_lon,
+                       pol_div_lam_x=pol_div_lam_x, pol_div_lam_y=pol_div_lam_y,
+                       euclidean_meter=euc_dist, manhattan_meter=manhattan, maximum_manhattan_meter=max_manhattan)
+            row.update(try_to_get_census_data(poldiv))
             output.append(row)
-        # print("tada")
-    with open("PolLocs.csv", "w", newline="") as outfile:
+    with open("PolLocs.csv", "w", newline="", encoding='utf-8') as outfile:
         writer = csv.DictWriter(outfile, header)
         writer.writeheader()
         writer.writerows(output)
+
+
+def try_to_get_census_data(div):
+    div = "-".join(div.split('-')[:3])
+    folder = "../040_PolDiv_demo_creator/project_chad_elections/output/pol_div_demo_data/"
+    file = f"{folder}{div}.csv"
+    data_key = 'Dim: Sex (3): Member ID: [1]: Total - Sex'
+    id_key = 'Member ID: Profile of Dissemination Areas (2247)'
+    if path.exists(file):
+        data = dict()
+        f = read_csv_file(file)
+        for row in f:
+            data[row[id_key]] = row[data_key]
+        return data
+    else:
+        return dict(zip(range(1, 2247 + 1), [""] * 2248))
+    pass
+
+
+def to_lambert(lat, lon=None):
+    inProj = Proj(init='EPSG:4326')
+    outProj = Proj(init='EPSG:3347')
+    if lon is None:
+        lat, lon = lat
+    new_pt = transform(inProj, outProj, lon, lat)
+    return new_pt
+
+
+def to_wgs(lambert_x, lambert_y=None):
+    outProj = Proj(init='EPSG:4326')
+    inProj = Proj(init='EPSG:3347')
+    if lambert_y is None:
+        lambert_x, lambert_y = lambert_x
+    new_pt = transform(inProj, outProj, lambert_x, lambert_y)
+    return new_pt
 
 
 def check_file():
@@ -144,7 +214,7 @@ def main():
                 failed.append(addr)
                 failed_addrs(failed)
                 continue
-        addresses[addr].update({service:result})
+        addresses[addr].update({service: result})
         for key in addresses[addr]:
             if key not in headers:
                 headers.append(key)
@@ -161,13 +231,13 @@ def make_pdiv_id(row):
 
 def make_addr(row):
     row_addr = f'{row.get("site_name_en")} {row.get("addr_en")} ' \
-        f'{row.get("municipality")} {row.get("province")} {row.get("postal_code")}'
+               f'{row.get("municipality")} {row.get("province")} {row.get("postal_code")}'
     return row_addr
 
 
 def make_addr2(row):
     row_addr = f'{row.get("name")} {row.get("addr")} ' \
-        f'{row.get("city")} {row.get("prov")} {row.get("pocd")}'
+               f'{row.get("city")} {row.get("prov")} {row.get("pocd")}'
     return row_addr
 
 
