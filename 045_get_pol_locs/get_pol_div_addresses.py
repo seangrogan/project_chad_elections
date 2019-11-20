@@ -1,6 +1,6 @@
 import csv
 import json
-from collections import defaultdict, OrderedDict
+from collections import defaultdict, OrderedDict, Counter
 from time import sleep
 
 import geocoder
@@ -14,6 +14,44 @@ class Parameters:
     PolLocAddrs = "D:/" \
                   "gis_database/canada/polling_location_addresses/canada_polling_locations_19_10_2015_ontario.csv"
     APIKeys = "/home/sean/Desktop/prop_data/api_keys.json"
+
+def make_a_CSV():
+    data = get_data(file="addrs2.json")
+    output = []
+    header = ["ed_num", "pd_pfx", 'pd_sufx', 'pd_ab',
+              'lat', 'lon', 'site', 'addr', 'city', 'postcode', 'prov', 'quality', 'confidence']
+    for address, _info in data.items():
+        site, addr, city, postcode, prov = _info['name'], _info['addr'], _info['city'], _info['pocd'], _info['prov']
+        for poldiv in _info["PolDivs"]:
+            ed_num, pd_pfx, pd_sufx, pd_ab = poldiv.split('-')
+            lat, lon = _info.get("arcgis", {}).get('lat'), _info.get("arcgis", {}).get('lng')
+            quality, confidence = _info.get("arcgis", {}).get('quality'), _info.get("arcgis", {}).get('confidence')
+            row = dict(ed_num=ed_num, pd_pfx=pd_pfx, pd_sufx=pd_sufx, pd_ab=pd_ab,
+                       lat=lat, lon=lon, quality=quality, confidence=confidence,
+                       site=site, addr=addr, city=city, postcode=postcode, prov=prov)
+            output.append(row)
+        # print("tada")
+    with open("PolLocs.csv", "w", newline="") as outfile:
+        writer = csv.DictWriter(outfile, header)
+        writer.writeheader()
+        writer.writerows(output)
+
+
+def check_file():
+    data = get_data(file="addrs.json")
+    confidences, qualities = list(), list()
+    relations = list()
+    for address, information in data.items():
+        if "arcgis" in information:
+            confidence = information["arcgis"]["confidence"]
+            quality = information["arcgis"]["quality"]
+            if confidence < 7:
+                information.pop("arcgis")
+    counter1 = Counter(confidences)
+    counter2 = Counter(qualities)
+    counter3 = Counter(relations)
+    update_file(data, "addrs2.json")
+    pass
 
 
 def refactor_file(file="addrs.json"):
@@ -84,18 +122,20 @@ def main():
         BingMapsAPIKey = json.load(keyfile)["bing_maps"]
     # addresses, headers = get_file()
     # addresses = {make_addr2(row): row for row in addresses}
-    addresses = get_data()
+    addresses = get_data("addrs.json")
     p_bar = tqdm(total=len(addresses))
     for addr, items in addresses.items():
         p_bar.update()
-        if 'osm' in items or 'arcgis' in items:
+        # if 'osm' in items or 'arcgis' in items:
+        if 'arcgis' in items:
             continue
         sleep(2)
         new_addr = f"{items['addr']} {items['city']}, {items['prov']} {items['pocd']} CANADA"
         p_bar.set_postfix(ordered_dict=OrderedDict(Address=new_addr, NumFailed=len(failed)))
-        g = geocoder.osm(new_addr)
-        result = g.osm
-        service = 'osm'
+        result = None
+        # g = geocoder.osm(new_addr)
+        # result = g.osm
+        # service = 'osm'
         if result is None:
             g = geocoder.arcgis(new_addr)
             result = g.json
@@ -142,4 +182,6 @@ def make_addr_dict(row):
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    # check_file()
+    make_a_CSV()
